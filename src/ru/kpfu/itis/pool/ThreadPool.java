@@ -37,7 +37,7 @@ public class ThreadPool {
                         try {
                             tasks.wait();
                         } catch (InterruptedException e) {
-                            e.printStackTrace();
+                            throw new IllegalArgumentException(e);
                         }
                     }
                     task = tasks.poll();
