@@ -1,6 +1,4 @@
-package ru.kpfu.itis;
-
-import org.omg.PortableServer.THREAD_POLICY_ID;
+package ru.kpfu.itis.exampleThreads;
 
 public class MyThread implements Runnable {
 

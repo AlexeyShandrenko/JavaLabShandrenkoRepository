@@ -1,4 +1,4 @@
-package ru.kpfu.itis;
+package ru.kpfu.itis.exampleThreads;
 
 public class TickTock {
 
