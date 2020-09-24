@@ -4,13 +4,16 @@ import com.beust.jcommander.Parameter;
 
 public class Args {
 
-	@Parameter(names = {"--text"})
-	public String text;
+	@Parameter(names = {"--mode="})
+	public String mode;
 
-	@Parameter(names = {"--source"})
-	public String source;
+	@Parameter(names = {"--count="})
+	public String count;
 
-	@Parameter(names = {"--target"})
-	public String target;
+	@Parameter(names = {"--files="})
+	public String files;
+
+	@Parameter(names = {"--folder"})
+	public String folder;
 
 }

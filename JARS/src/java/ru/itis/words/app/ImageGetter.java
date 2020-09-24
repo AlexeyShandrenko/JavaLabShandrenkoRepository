@@ -1,4 +1,4 @@
-package ru.kpfu.itis.jarfiles;
+package ru.itis.words.app;
 
 import java.io.*;
 import java.net.HttpURLConnection;
