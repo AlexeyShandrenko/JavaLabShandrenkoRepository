@@ -1,28 +1,48 @@
 package ru.itis.words.app;
 
 import ru.itis.words.app.ThreadPool;
+import com.beust.jcommander.JCommander;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] argv) {
+
+        Args args = new Args();
+
+        JCommander.newBuilder()
+            .addObject(args)
+            .build()
+            .parse(argv);
+
+        // if (args.mode.equals("multi-thread")) {
+        //     ThreadPool thread = new ThreadPool(args.count);
+        // } else {
+        //     ThreadPool thread = new ThreadPool(1);
+        // }
+
+        ThreadPool thread;
 
         if (args.mode.equals("multi-thread")) {
-            ThreadPool thread = new ThreadPool(args.count);
+            thread = new ThreadPool(args.count);
         } else {
-            ThreadPool thread = new ThreadPool(1);
+            thread = new ThreadPool(1);
         }
 
         String[] lonelyUrl = args.files.split(";");
         
         for (int i = 0; i < lonelyUrl.length; i++) {
-            // int finalI = i;
+            int finalI = i;
             Runnable task = () -> {
-            ImageGetter im = new ImageGetter(lonelyUrl[i], args.folder);
+            ImageGetter im = new ImageGetter(lonelyUrl[finalI], args.folder);
             im.downloadImage();
             System.out.println(Thread.currentThread().getName() + " завершил загрузку!");
         };
             thread.submit(task);
         }
+
+    }
+  
+}        
 
         
 
@@ -51,6 +71,6 @@ public class Main {
         // thread.submit(task2);
         // thread.submit(task3);
 
-    }
+//     }
 
-}
+// }

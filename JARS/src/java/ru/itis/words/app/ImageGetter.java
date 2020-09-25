@@ -27,11 +27,6 @@ public class ImageGetter {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             InputStream inputStream = connection.getInputStream();
 
-            StringBuilder stringBuilder = new StringBuilder();
-
-            stringBuilder.append(this.imageUrl);
-            stringBuilder.delete(0, 10);
-
             OutputStream outputStream = new FileOutputStream(this.path + "\\" + counter() + ".jpg");
 
             byte[] b = new byte[256];

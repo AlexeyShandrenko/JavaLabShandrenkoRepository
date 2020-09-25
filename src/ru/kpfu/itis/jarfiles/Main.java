@@ -6,7 +6,27 @@ public class Main {
 
     public static void main(String[] args) {
 
+//        if (args.mode.equals("multi-thread")) {
+//            ThreadPool thread = new ThreadPool(args.count);
+//        } else {
+//            ThreadPool thread = new ThreadPool(1);
+//        }
+//
+//        String[] lonelyUrl = args.files.split(";");
+//
+//        for (int i = 0; i < lonelyUrl.length; i++) {
+//            // int finalI = i;
+//            Runnable task = () -> {
+//                ImageGetter im = new ImageGetter(lonelyUrl[i], args.folder);
+//                im.downloadImage();
+//                System.out.println(Thread.currentThread().getName() + " завершил загрузку!");
+//            };
+//            thread.submit(task);
+//        }
+
         ThreadPool thread = new ThreadPool(3);
+
+
 
         Runnable task1 = () -> {
             ImageGetter im1 = new ImageGetter("https://www.meme-arsenal.com/memes/bc3847731228057022e85e26065dd81d.jpg",
