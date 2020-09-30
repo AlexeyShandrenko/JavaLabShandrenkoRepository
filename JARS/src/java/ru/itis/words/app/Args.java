@@ -8,7 +8,7 @@ public class Args {
 	public String mode;
 
 	@Parameter(names = {"--count"})
-	public int count;
+	public String count;
 
 	@Parameter(names = {"--files"})
 	public String files;

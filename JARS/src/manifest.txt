@@ -1,1 +1,2 @@
-Main-Class: ru.itis.words.app.Program
+Main-Class: ru.itis.words.app.Downloader
+
