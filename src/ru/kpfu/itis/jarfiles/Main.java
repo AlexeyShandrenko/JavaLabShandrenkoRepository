@@ -1,9 +1,6 @@
 package ru.kpfu.itis.jarfiles;
 
-import com.beust.jcommander.JCommander;
 import ru.kpfu.itis.pool.ThreadPool;
-
-import java.util.Scanner;
 
 public class Main {
 
