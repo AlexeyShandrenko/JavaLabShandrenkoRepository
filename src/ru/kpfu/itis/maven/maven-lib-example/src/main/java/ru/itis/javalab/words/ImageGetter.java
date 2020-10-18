@@ -14,7 +14,7 @@ public class ImageGetter {
     public String path;
     private static int count;
 
-    protected ImageGetter(String imageUrl, String path) {
+    public ImageGetter(String imageUrl, String path) {
 
         this.imageUrl = imageUrl;
         this.path = path;
