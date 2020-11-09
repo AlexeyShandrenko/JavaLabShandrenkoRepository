@@ -1,0 +1,9 @@
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\repositories\SimpleJdbcTemplate.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\models\User.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\repositories\UsersRepository.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\repositories\ProductsRepository.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\models\Product.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\repositories\UsersRepositoryJdbcImpl.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\servlets\UsersServlet.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\repositories\RowMapper.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\repositories\CrudRepository.java
