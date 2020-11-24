@@ -14,14 +14,10 @@ import java.util.Optional;
 
 public class UsersRepositoryJdbcImpl implements UsersRepository {
 
-    //language=SQL
-    private static final String SQL_SELECT_BY_AGE = "select * from users where age = ?";
-    //language=SQL
-    private static final String SQL_SELECT = "select * from users";
-    //language=SQL
-    private static final String SQL_SELECT_FIRST_BY_FIRSTNAME_AND_LASTNAME = "select * from users where firstname=? and lastname=?";
-    //language=SQL
-    private static final String SQL_SELECT_BY_ID = "select * from users where id=?";
+    public static final String SQL_SELECT = "SELECT * FROM USERS";
+    public static final String SQL_FIND_BY_EMAIL_AND_PASSWORD = "SELECT * FROM USERS WHERE email=? AND password=?";
+    public static final String SQL_SAVE_USER = "INSERT INTO USERS (firstname, lastname, email, password) VALUES (?, ?, ?, ?);";
+    public static final String SQL_FIND_BY_EMAIL = "SELECT * FROM USERS WHERE user_email=?";
 
     private SimpleJdbcTemplate template;
 
@@ -33,18 +29,20 @@ public class UsersRepositoryJdbcImpl implements UsersRepository {
             .id(row.getLong("id"))
             .firstname(row.getString("firstname"))
             .lastname(row.getString("lastname"))
-            .age(row.getInt("age"))
+            .email(row.getString("email"))
+            .password(row.getString("password"))
             .build();
 
+
     @Override
-    public List<User> findAllByAge(Integer age) {
-        List<User> user = template.query(SQL_SELECT_BY_AGE, userRowMapper, age);
-        return user.isEmpty() ? null : user;
+    public Optional<User> findFirstByEmailAndPassword(String email, String pass) {
+        List<User> user = template.query(SQL_FIND_BY_EMAIL_AND_PASSWORD, userRowMapper, email, pass);
+        return user.isEmpty() ? Optional.empty() : Optional.of(user.get(0));
     }
 
     @Override
-    public Optional<User> findFirstByFirstnameAndLastname(String firstname, String lastname) {
-        List<User> user = template.query(SQL_SELECT_FIRST_BY_FIRSTNAME_AND_LASTNAME, userRowMapper, firstname, lastname);
+    public Optional<User> findUserByEmail(String email) {
+        List<User> user = template.query(SQL_FIND_BY_EMAIL, userRowMapper, email);
         return user.isEmpty() ? Optional.empty() : Optional.of(user.get(0));
     }
 
@@ -55,23 +53,12 @@ public class UsersRepositoryJdbcImpl implements UsersRepository {
     }
 
     @Override
-    public Optional<User> findById(Long id) {
-        List<User> user = template.query(SQL_SELECT_BY_ID, userRowMapper, id);
-        return user.isEmpty() ? Optional.empty() : Optional.of(user.get(0));
-    }
-
-    @Override
     public void save(User entity) {
-
+        template.checkQuery(SQL_SAVE_USER, entity.getFirstname(), entity.getLastname(), entity.getEmail(), entity.getPassword());
     }
 
     @Override
     public void update(User entity) {
-
-    }
-
-    @Override
-    public void deleteById(Long id) {
 
     }
 
