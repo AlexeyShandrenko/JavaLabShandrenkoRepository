@@ -2,14 +2,13 @@ package ru.itis.javalab.listeners;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.javalab.repositories.CookieRepository;
 import ru.itis.javalab.repositories.CookieRepositoryImpl;
 import ru.itis.javalab.repositories.UsersRepository;
 import ru.itis.javalab.repositories.UsersRepositoryJdbcImpl;
-import ru.itis.javalab.services.CookieService;
-import ru.itis.javalab.services.CookieServiceImpl;
-import ru.itis.javalab.services.UsersService;
-import ru.itis.javalab.services.UsersServiceImpl;
+import ru.itis.javalab.services.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -50,6 +49,9 @@ public class AppConfigServletContextListener implements ServletContextListener {
 
         CookieService cookieService = new CookieServiceImpl(cookieRepository);
         servletContext.setAttribute("cookieService", cookieService);
+
+        BCrypterService bCrypterService = new BCrypterServiceImpl();
+        servletContext.setAttribute("bCrypterService", bCrypterService);
 
 
     }

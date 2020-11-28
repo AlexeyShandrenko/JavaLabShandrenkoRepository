@@ -15,6 +15,7 @@
 <div>
     <h1 style="color: ${cookie.get("color").value}">USERS</h1>
     <form action="/users" method="post">
+        <input type="password" name="password" placeholder="password">
         <select name="color">
             <option value="red">RED</option>
             <option value="green">GREEN</option>

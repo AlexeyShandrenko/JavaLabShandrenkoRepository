@@ -17,7 +17,7 @@ public class UsersRepositoryJdbcImpl implements UsersRepository {
     public static final String SQL_SELECT = "SELECT * FROM USERS";
     public static final String SQL_FIND_BY_EMAIL_AND_PASSWORD = "SELECT * FROM USERS WHERE email=? AND password=?";
     public static final String SQL_SAVE_USER = "INSERT INTO USERS (firstname, lastname, email, password) VALUES (?, ?, ?, ?);";
-    public static final String SQL_FIND_BY_EMAIL = "SELECT * FROM USERS WHERE user_email=?";
+    public static final String SQL_FIND_BY_EMAIL = "SELECT * FROM USERS WHERE email=?";
 
     private SimpleJdbcTemplate template;
 

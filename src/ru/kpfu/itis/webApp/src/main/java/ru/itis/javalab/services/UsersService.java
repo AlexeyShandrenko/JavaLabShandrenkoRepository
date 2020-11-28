@@ -10,4 +10,5 @@ public interface UsersService {
     void saveUser(Map pool);
     List<User> getAllUser();
     Optional<User> findUserByEmailAndPassword(String email, String password);
+    Optional<User> findUserByEmail(String email);
 }

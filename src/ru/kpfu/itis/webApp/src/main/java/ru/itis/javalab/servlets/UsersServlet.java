@@ -3,6 +3,8 @@ package ru.itis.javalab.servlets;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.omg.DynamicAny.DynArray;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.javalab.models.User;
 import ru.itis.javalab.repositories.UsersRepository;
 import ru.itis.javalab.repositories.UsersRepositoryJdbcImpl;
@@ -24,12 +26,14 @@ import java.util.Optional;
 public class UsersServlet extends HttpServlet {
 
     private UsersService usersService;
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         ServletContext servletContext = config.getServletContext();
         usersService = (UsersService) servletContext.getAttribute("usersService");
+        passwordEncoder = (PasswordEncoder) servletContext.getAttribute("passwordEncoder");
     }
 
     @Override
@@ -41,6 +45,10 @@ public class UsersServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        String password =req.getParameter("password");
+//        String hashPassword = passwordEncoder.encode(password);
+//        System.out.println(hashPassword);
+//        System.out.println(passwordEncoder.matches("qwerty007", hashPassword));
         String color = req.getParameter("color");
         Cookie cookie = new Cookie("color", color);
         cookie.setMaxAge(60 * 60 * 24 * 365);
