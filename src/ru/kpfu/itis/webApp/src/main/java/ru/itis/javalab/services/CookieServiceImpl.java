@@ -1,8 +1,10 @@
 package ru.itis.javalab.services;
 
+import ru.itis.javalab.models.Cookies;
 import ru.itis.javalab.repositories.CookieRepository;
 
 import javax.servlet.http.Cookie;
+import java.util.List;
 import java.util.Optional;
 
 public class CookieServiceImpl implements CookieService {
@@ -19,12 +21,12 @@ public class CookieServiceImpl implements CookieService {
     }
 
     @Override
-    public Boolean checkCookiesByID(Long id) {
+    public List<Cookies> checkCookiesByID(Long id) {
         return cookieRepository.checkCookiesByID(id);
     }
 
     @Override
-    public Boolean checkCookiesByValue(String value) {
+    public List<Cookies> checkCookiesByValue(String value) {
         return cookieRepository.checkCookiesByValue(value);
     }
 

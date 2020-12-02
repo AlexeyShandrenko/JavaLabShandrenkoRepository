@@ -7,7 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.javalab.models.User;
 import ru.itis.javalab.repositories.UsersRepository;
-import ru.itis.javalab.repositories.UsersRepositoryJdbcImpl;
+import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
 import ru.itis.javalab.services.UsersService;
 
 import javax.servlet.ServletConfig;

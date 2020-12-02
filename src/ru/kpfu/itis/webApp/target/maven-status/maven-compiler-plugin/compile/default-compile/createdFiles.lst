@@ -1,8 +1,8 @@
-ru\itis\javalab\repositories\UsersRepositoryJdbcImpl.class
 ru\itis\javalab\filters\AuthFilter.class
 ru\itis\javalab\filters\LoggingFilter.class
 ru\itis\javalab\services\UsersService.class
 ru\itis\javalab\repositories\CrudRepository.class
+ru\itis\javalab\repositories\UsersRepositoryJdbcTemplateImpl.class
 ru\itis\javalab\servlets\ProfileServlet.class
 ru\itis\javalab\repositories\ProductsRepository.class
 ru\itis\javalab\servlets\SignUpServlet.class
@@ -11,6 +11,8 @@ ru\itis\javalab\services\BCrypterService.class
 ru\itis\javalab\listeners\AppConfigServletContextListener.class
 ru\itis\javalab\repositories\CookieRepositoryImpl.class
 ru\itis\javalab\services\CookieServiceImpl.class
+ru\itis\javalab\servlets\UserJsonServlet.class
+ru\itis\javalab\dto\UserDto.class
 ru\itis\javalab\repositories\CookieRepository.class
 ru\itis\javalab\servlets\LoginServlet.class
 ru\itis\javalab\filters\RequestUrlFilter.class
@@ -18,10 +20,11 @@ ru\itis\javalab\models\Product$ProductBuilder.class
 ru\itis\javalab\repositories\UsersRepository.class
 ru\itis\javalab\services\BCrypterServiceImpl.class
 ru\itis\javalab\models\Product.class
-ru\itis\javalab\repositories\RowMapper.class
+ru\itis\javalab\models\Cookies$CookiesBuilder.class
+ru\itis\javalab\models\Cookies.class
 ru\itis\javalab\services\UsersServiceImpl.class
 ru\itis\javalab\models\User.class
 ru\itis\javalab\servlets\UsersServlet.class
 ru\itis\javalab\models\User$UserBuilder.class
-ru\itis\javalab\repositories\SimpleJdbcTemplate.class
+ru\itis\javalab\dto\UserDto$UserDtoBuilder.class
 ru\itis\javalab\filters\RequestHeadersFilter.class

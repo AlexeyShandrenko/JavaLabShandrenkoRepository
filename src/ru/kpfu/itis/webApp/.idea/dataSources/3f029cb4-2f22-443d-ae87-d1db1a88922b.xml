@@ -795,7 +795,7 @@ false posixrules
     <database id="3" parent="1" name="internetshop">
       <ObjectId>41197</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1008</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1030</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|49815|49817|1
 sequence|table|49826|49828|1
@@ -867,7 +867,7 @@ sequence|table|49890|49892|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1009</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1031</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="19" parent="3" name="heap">

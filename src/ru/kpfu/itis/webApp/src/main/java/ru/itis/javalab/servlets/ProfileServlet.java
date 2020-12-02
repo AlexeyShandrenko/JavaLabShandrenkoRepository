@@ -2,7 +2,8 @@ package ru.itis.javalab.servlets;
 
 import ru.itis.javalab.models.User;
 import ru.itis.javalab.repositories.UsersRepository;
-import ru.itis.javalab.repositories.UsersRepositoryJdbcImpl;
+import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
+import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -33,7 +34,7 @@ public class ProfileServlet extends HttpServlet {
         HttpSession session = req.getSession();
         String user_email = (String) session.getAttribute("user_email");
         if (user_email != null) {
-            UsersRepositoryJdbcImpl dui = new UsersRepositoryJdbcImpl(dataSource);
+            UsersRepositoryJdbcTemplateImpl dui = new UsersRepositoryJdbcTemplateImpl(dataSource);
             Optional<User> user = dui.findUserByEmail(user_email);
             req.setAttribute("user_name", user);
                     req.getRequestDispatcher("/front/profile.jsp").forward(req, resp);

@@ -1,5 +1,6 @@
 package ru.itis.javalab.listeners;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -7,7 +8,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.javalab.repositories.CookieRepository;
 import ru.itis.javalab.repositories.CookieRepositoryImpl;
 import ru.itis.javalab.repositories.UsersRepository;
-import ru.itis.javalab.repositories.UsersRepositoryJdbcImpl;
+import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
+import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
 import ru.itis.javalab.services.*;
 
 import javax.servlet.ServletContext;
@@ -41,7 +43,7 @@ public class AppConfigServletContextListener implements ServletContextListener {
 
         servletContext.setAttribute("dataSource", dataSource);
 
-        UsersRepository usersRepository = new UsersRepositoryJdbcImpl(dataSource);
+        UsersRepository usersRepository = new UsersRepositoryJdbcTemplateImpl(dataSource);
         CookieRepository cookieRepository = new CookieRepositoryImpl(dataSource);
 
         UsersService usersService = new UsersServiceImpl(usersRepository);
@@ -52,6 +54,9 @@ public class AppConfigServletContextListener implements ServletContextListener {
 
         BCrypterService bCrypterService = new BCrypterServiceImpl();
         servletContext.setAttribute("bCrypterService", bCrypterService);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        servletContext.setAttribute("objectMapper", objectMapper);
 
 
     }
