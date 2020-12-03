@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import ru.kpfu.itis.models.User;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.*;
 
 public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
@@ -15,6 +16,15 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
     //language=SQL
     private static final String SQL_INSERT = "insert into account(email, first_name, last_name, hash_password) " +
             "values (:email, :firstName, :lastName, :hashPassword)";
+
+    //language=SQL
+    private static final String SQL_SELECT = "select * from account";
+
+    //language=SQL
+    private static final String SQL_SELECT_BY_ID = "select * from account where id = :id limit 1";
+
+    //language=SQL
+    private static final String SQL_SELECT_ALL_WITH_PAGES = "select * from account order by id limit :limit offset :offset;";
 
     //    private JdbcTemplate jdbcTemplate;
     private NamedParameterJdbcTemplate jdbcTemplate;
@@ -47,6 +57,11 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
     }
 
     @Override
+    public List<User> findAllByAge(Integer age) {
+        return null;
+    }
+
+    @Override
     public void save(User entity) {
         Map<String, Object> params = new HashMap<>();
         params.put("email", entity.getEmail());
@@ -71,11 +86,26 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
 
     @Override
     public Optional<User> findById(Long aLong) {
-        return Optional.empty();
+        User user;
+        try {
+            user = jdbcTemplate.queryForObject(SQL_SELECT_BY_ID, Collections.singletonMap("id", aLong), userRowMapper);
+        } catch (EmptyResultDataAccessException e) {
+            user = null;
+        }
+
+        return Optional.ofNullable(user);
     }
 
     @Override
     public List<User> findAll() {
-        return null;
+        return jdbcTemplate.query(SQL_SELECT, userRowMapper);
+    }
+
+    @Override
+    public List<User> findAll(int page, int size) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("limit", size);
+        params.put("offset", page * size);
+        return jdbcTemplate.query(SQL_SELECT_ALL_WITH_PAGES, params, userRowMapper);
     }
 }

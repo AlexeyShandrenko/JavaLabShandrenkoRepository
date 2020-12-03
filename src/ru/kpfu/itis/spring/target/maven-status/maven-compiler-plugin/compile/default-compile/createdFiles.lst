@@ -1,0 +1,16 @@
+ru\kpfu\itis\listeners\AppConfigServletContextListener.class
+ru\kpfu\itis\front\FrontImpl.class
+ru\kpfu\itis\services\MailsServiceMockImpl.class
+ru\kpfu\itis\models\User$UserBuilder.class
+ru\kpfu\itis\servlets\UsersJsonServlet.class
+ru\kpfu\itis\repositories\CrudRepository.class
+ru\kpfu\itis\services\UsersServiceImpl.class
+ru\kpfu\itis\repositories\UsersRepositoryJdbcTemplateImpl.class
+ru\kpfu\itis\services\MailsService.class
+ru\kpfu\itis\Application.class
+ru\kpfu\itis\repositories\UsersRepository.class
+ru\kpfu\itis\dto\UserDto.class
+ru\kpfu\itis\front\Front.class
+ru\kpfu\itis\services\UsersService.class
+ru\kpfu\itis\dto\UserDto$UserDtoBuilder.class
+ru\kpfu\itis\models\User.class

@@ -1,10 +1,14 @@
 package ru.kpfu.itis.services;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
+import ru.kpfu.itis.dto.UserDto;
 import ru.kpfu.itis.models.User;
 import ru.kpfu.itis.repositories.UsersRepository;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
+import static ru.kpfu.itis.dto.UserDto.from;
 
 public class UsersServiceImpl implements UsersService {
     private UsersRepository usersRepository;
@@ -33,6 +37,24 @@ public class UsersServiceImpl implements UsersService {
                 mailsService.sendMail(email, "был выполнен вход в " + LocalDateTime.now().toString());
             }
         });
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return null;
+    }
+
+    @Override
+    public List<UserDto> getAllUsers(int page, int size) {
+        return from(usersRepository.findAll(page, size));
+    }
+
+    @Override
+    public void addUsers(UserDto userDto) {
+        usersRepository.save(User.builder()
+                .firstName(userDto.getFirstname())
+                .lastName(userDto.getLastname())
+                .build());
     }
 
 }
