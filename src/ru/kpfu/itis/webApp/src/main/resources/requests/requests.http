@@ -7,6 +7,6 @@ POST http://localhost:8080/json/users
 Content-Type: application/json
 
 {
-  "firstname": "Новый пользователь",
-  "lastname": "Очень новый"
+  "firstname": "New user",
+  "lastname": "Super new"
 }

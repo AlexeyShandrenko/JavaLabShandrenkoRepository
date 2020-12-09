@@ -785,15 +785,16 @@ false Z
 false Zulu
 false posixrules
 </TimeZones>
-      <StartupTime>1606217297</StartupTime>
+      <StartupTime>1606948269</StartupTime>
     </root>
     <database id="2" parent="1" name="Javalab_2020">
       <ObjectId>49539</ObjectId>
       <Comment>DB for JavaLab</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>868</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1221</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|49674|49676|1
+      <Relations>sequence|table|49960|49962|1
+sequence|table|49674|49676|1
 </Relations>
     </database>
     <database id="3" parent="1" name="internetshop">
@@ -862,7 +863,7 @@ false posixrules
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>869</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1222</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="19" parent="2" name="heap">
@@ -932,35 +933,92 @@ false posixrules
     <language id="28" parent="2" name="internal"/>
     <language id="29" parent="2" name="plpgsql"/>
     <language id="30" parent="2" name="sql"/>
-    <sequence id="31" parent="18" name="users_id_seq">
+    <sequence id="31" parent="18" name="account_id_seq">
+      <ObjectId>49960</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1042</StateNumber>
+      <DataType>integer|0s</DataType>
+    </sequence>
+    <sequence id="32" parent="18" name="users_id_seq">
       <ObjectId>49674</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>856</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
-    <table id="32" parent="18" name="cookie">
+    <table id="33" parent="18" name="account">
+      <ObjectId>49962</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1042</StateNumber>
+    </table>
+    <table id="34" parent="18" name="cookie">
       <ObjectId>49697</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>867</StateNumber>
     </table>
-    <table id="33" parent="18" name="users">
+    <table id="35" parent="18" name="users">
       <ObjectId>49676</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>867</StateNumber>
     </table>
-    <column id="34" parent="32" name="id">
+    <column id="36" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1042</StateNumber>
+      <DefaultExpression>nextval(&apos;account_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="37" parent="33" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1042</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="38" parent="33" name="first_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1042</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="39" parent="33" name="last_name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1042</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="40" parent="33" name="hash_password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1042</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="41" parent="33" name="account_pkey">
+      <ObjectId>49969</ObjectId>
+      <StateNumber>1042</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="42" parent="33" name="account_pkey">
+      <ObjectId>49970</ObjectId>
+      <StateNumber>1042</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>account_pkey</UnderlyingIndexName>
+    </key>
+    <column id="43" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>867</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="35" parent="32" name="cookie_value">
+    <column id="44" parent="34" name="cookie_value">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>867</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="36" parent="32" name="cookie_id_fkey">
+    <foreign-key id="45" parent="34" name="cookie_id_fkey">
       <ObjectId>49700</ObjectId>
       <StateNumber>867</StateNumber>
       <ColNames>id</ColNames>
@@ -970,7 +1028,7 @@ false posixrules
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="37" parent="33" name="id">
+    <column id="46" parent="35" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -978,75 +1036,75 @@ false posixrules
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="38" parent="33" name="firstname">
+    <column id="47" parent="35" name="firstname">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>856</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="39" parent="33" name="lastname">
+    <column id="48" parent="35" name="lastname">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>856</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="40" parent="33" name="email">
+    <column id="49" parent="35" name="email">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>856</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="41" parent="33" name="password">
+    <column id="50" parent="35" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>856</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="33" name="age">
+    <column id="51" parent="35" name="age">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>856</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="43" parent="33" name="phone">
+    <column id="52" parent="35" name="phone">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>856</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="44" parent="33" name="users_pkey">
+    <index id="53" parent="35" name="users_pkey">
       <ObjectId>49683</ObjectId>
       <StateNumber>856</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="45" parent="33" name="users_email_key">
+    <index id="54" parent="35" name="users_email_key">
       <ObjectId>49685</ObjectId>
       <StateNumber>856</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="46" parent="33" name="users_phone_key">
+    <index id="55" parent="35" name="users_phone_key">
       <ObjectId>49687</ObjectId>
       <StateNumber>856</StateNumber>
       <ColNames>phone</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="47" parent="33" name="users_pkey">
+    <key id="56" parent="35" name="users_pkey">
       <ObjectId>49684</ObjectId>
       <StateNumber>856</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
-    <key id="48" parent="33" name="users_email_key">
+    <key id="57" parent="35" name="users_email_key">
       <ObjectId>49686</ObjectId>
       <StateNumber>856</StateNumber>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_key</UnderlyingIndexName>
     </key>
-    <key id="49" parent="33" name="users_phone_key">
+    <key id="58" parent="35" name="users_phone_key">
       <ObjectId>49688</ObjectId>
       <StateNumber>856</StateNumber>
       <ColNames>phone</ColNames>

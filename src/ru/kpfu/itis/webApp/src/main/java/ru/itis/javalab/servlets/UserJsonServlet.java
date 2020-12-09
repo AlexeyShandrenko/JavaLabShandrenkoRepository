@@ -1,9 +1,11 @@
 package ru.itis.javalab.servlets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.context.ApplicationContext;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.javalab.dto.UserDto;
 import ru.itis.javalab.services.UsersService;
+import ru.itis.javalab.services.UsersServiceImpl;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -25,8 +27,9 @@ public class UserJsonServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         ServletContext servletContext = config.getServletContext();
-        this.usersService = (UsersService) servletContext.getAttribute("usersService");
-        this.objectMapper = (ObjectMapper) servletContext.getAttribute("objectMapper");
+        ApplicationContext applicationContext = (ApplicationContext) servletContext.getAttribute("applicationContext");
+        this.usersService = applicationContext.getBean(UsersService.class);
+        this.objectMapper = applicationContext.getBean(ObjectMapper.class);
     }
 
     @Override

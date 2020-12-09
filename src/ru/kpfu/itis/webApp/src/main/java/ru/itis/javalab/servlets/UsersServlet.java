@@ -3,12 +3,15 @@ package ru.itis.javalab.servlets;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.omg.DynamicAny.DynArray;
+import org.springframework.context.ApplicationContext;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.javalab.models.User;
 import ru.itis.javalab.repositories.UsersRepository;
 import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
+import ru.itis.javalab.services.BCrypterServiceImpl;
 import ru.itis.javalab.services.UsersService;
+import ru.itis.javalab.services.UsersServiceImpl;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -26,14 +29,15 @@ import java.util.Optional;
 public class UsersServlet extends HttpServlet {
 
     private UsersService usersService;
-    private PasswordEncoder passwordEncoder;
+//    private PasswordEncoder passwordEncoder;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         ServletContext servletContext = config.getServletContext();
-        usersService = (UsersService) servletContext.getAttribute("usersService");
-        passwordEncoder = (PasswordEncoder) servletContext.getAttribute("passwordEncoder");
+        ApplicationContext applicationContext = (ApplicationContext) servletContext.getAttribute("applicationContext");
+        usersService = applicationContext.getBean(UsersService.class);
+//        passwordEncoder = applicationContext.getBean(BCryptPasswordEncoder.class);
     }
 
     @Override

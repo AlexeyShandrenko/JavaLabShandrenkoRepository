@@ -3,6 +3,9 @@ package ru.itis.javalab.listeners;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.javalab.repositories.CookieRepository;
@@ -25,40 +28,8 @@ public class AppConfigServletContextListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         ServletContext servletContext = servletContextEvent.getServletContext();
-
-        Properties properties = new Properties();
-        try {
-            properties.load(servletContext.getResourceAsStream("/WEB-INF/properties/db.properties"));
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
-
-        HikariConfig hikariConfig = new HikariConfig();
-        hikariConfig.setJdbcUrl(properties.getProperty("db.url"));
-        hikariConfig.setDriverClassName(properties.getProperty("db.driver-classname"));
-        hikariConfig.setUsername(properties.getProperty("db.username"));
-        hikariConfig.setPassword(properties.getProperty("db.password"));
-        hikariConfig.setMaximumPoolSize(Integer.parseInt(properties.getProperty("db.hikari.max-pool-size")));
-        HikariDataSource dataSource = new HikariDataSource(hikariConfig);
-
-        servletContext.setAttribute("dataSource", dataSource);
-
-        UsersRepository usersRepository = new UsersRepositoryJdbcTemplateImpl(dataSource);
-        CookieRepository cookieRepository = new CookieRepositoryImpl(dataSource);
-
-        UsersService usersService = new UsersServiceImpl(usersRepository);
-        servletContext.setAttribute("usersService", usersService);
-
-        CookieService cookieService = new CookieServiceImpl(cookieRepository);
-        servletContext.setAttribute("cookieService", cookieService);
-
-        BCrypterService bCrypterService = new BCrypterServiceImpl();
-        servletContext.setAttribute("bCrypterService", bCrypterService);
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        servletContext.setAttribute("objectMapper", objectMapper);
-
-
+        ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+        servletContext.setAttribute("applicationContext", context);
     }
 
     @Override

@@ -1,7 +1,9 @@
 package ru.itis.javalab.servlets;
 
+import org.springframework.context.ApplicationContext;
 import ru.itis.javalab.models.User;
 import ru.itis.javalab.services.BCrypterService;
+import ru.itis.javalab.services.BCrypterServiceImpl;
 import ru.itis.javalab.services.CookieService;
 import ru.itis.javalab.services.UsersService;
 
@@ -22,9 +24,10 @@ public class LoginServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) {
         ServletContext context = config.getServletContext();
-        usersService = (UsersService) context.getAttribute("usersService");
-        cookieService = (CookieService) context.getAttribute("cookieService");
-        bCrypterService = (BCrypterService) context.getAttribute("bCrypterService");
+        ApplicationContext applicationContext = (ApplicationContext) context.getAttribute("applicationContext");
+        usersService = applicationContext.getBean(UsersService.class);
+        cookieService = applicationContext.getBean(CookieService.class);
+        bCrypterService = applicationContext.getBean(BCrypterServiceImpl.class);
     }
 
     @Override

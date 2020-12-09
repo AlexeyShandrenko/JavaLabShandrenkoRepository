@@ -25,5 +25,6 @@ D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\ma
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\servlets\ProfileServlet.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\servlets\SignUpServlet.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\repositories\ProductsRepository.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\config\ApplicationConfig.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\filters\AuthFilter.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\webApp\src\main\java\ru\itis\javalab\repositories\old\RowMapper.java

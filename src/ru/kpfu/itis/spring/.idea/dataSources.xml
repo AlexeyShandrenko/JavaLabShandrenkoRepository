@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/Javalab_2020</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="internetshop@localhost" uuid="68dbdd7a-577d-4443-bc52-67c392694cab">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/internetshop</jdbc-url>
+    </data-source>
   </component>
 </project>

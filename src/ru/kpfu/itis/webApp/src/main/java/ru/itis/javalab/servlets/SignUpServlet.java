@@ -1,8 +1,10 @@
 package ru.itis.javalab.servlets;
 
+import org.springframework.context.ApplicationContext;
 import ru.itis.javalab.services.CookieService;
 import ru.itis.javalab.services.UsersService;
 
+import javax.jws.soap.SOAPBinding;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -21,8 +23,9 @@ public class SignUpServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         ServletContext servletContext = config.getServletContext();
-        usersService = (UsersService) servletContext.getAttribute("usersService");
-        cookieService = (CookieService) servletContext.getAttribute("cookieService");
+        ApplicationContext applicationContext = (ApplicationContext) servletContext.getAttribute("applicationContext");
+        usersService = applicationContext.getBean(UsersService.class);
+        cookieService = applicationContext.getBean(CookieService.class);
     }
 
     @Override

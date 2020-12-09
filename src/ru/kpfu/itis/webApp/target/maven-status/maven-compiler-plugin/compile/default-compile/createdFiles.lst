@@ -1,4 +1,3 @@
-ru\itis\javalab\filters\AuthFilter.class
 ru\itis\javalab\filters\LoggingFilter.class
 ru\itis\javalab\services\UsersService.class
 ru\itis\javalab\repositories\CrudRepository.class
@@ -8,6 +7,7 @@ ru\itis\javalab\repositories\ProductsRepository.class
 ru\itis\javalab\servlets\SignUpServlet.class
 ru\itis\javalab\services\CookieService.class
 ru\itis\javalab\services\BCrypterService.class
+ru\itis\javalab\config\ApplicationConfig.class
 ru\itis\javalab\listeners\AppConfigServletContextListener.class
 ru\itis\javalab\repositories\CookieRepositoryImpl.class
 ru\itis\javalab\services\CookieServiceImpl.class
