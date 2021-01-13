@@ -5,24 +5,41 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import ru.itis.javalab.repositories.CookieRepository;
+import ru.itis.javalab.repositories.CookieRepositoryImpl;
 import ru.itis.javalab.repositories.UsersRepository;
 import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
-import ru.itis.javalab.services.UsersService;
-import ru.itis.javalab.services.UsersServiceImpl;
+import ru.itis.javalab.services.*;
 
 import javax.sql.DataSource;
 
 @Configuration
+@ComponentScan("ru.itis.javalab")
 @PropertySource("classpath:db.properties")
 public class ApplicationConfig {
 
     @Autowired
     private Environment environment;
 
+    @Bean
+    public BCrypterService bCrypterService() {
+        return new BCrypterServiceImpl();
+    }
+
+    @Bean
+    public CookieRepository cookieRepository() {
+        return new CookieRepositoryImpl(jdbcTemplate());
+    }
+
+    @Bean
+    public CookieService cookieService() {
+        return new CookieServiceImpl(cookieRepository());
+    }
     @Bean
     public UsersService usersService() {
         return new UsersServiceImpl(usersRepository());

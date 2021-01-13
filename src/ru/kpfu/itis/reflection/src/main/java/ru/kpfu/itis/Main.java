@@ -22,8 +22,8 @@ public class Main {
         Class<?> users = Class.forName("ru.kpfu.itis.User");
         EntityManager entityManager = new EntityManager(dataSource);
 //        entityManager.createTable("testTable", users);
-        User user1 = new User("vasya", "pupkin", true, 123L);
-//        entityManager.save("testTable", user1);
+        User user1 = new User("alexey", "sh", true, 12L);
+        entityManager.save("testTable", user1);
         entityManager.findById("testTable", users, Long.class, 123L);
 
 

@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+          integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #f1f1f2; font-family: 'Josefin Sans', sans-serif">
+
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div style="background-color: #1995ad" class="container-fluid">
+            <a class="navbar-brand" style="font-size: 30px; color: white; background-color: #1995ad"
+               href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon align-top"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"
+                           style=" font-size: 20px; color: white; background-color: #1995ad">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login" style="font-size: 20px; color: white; background-color: #1995ad">Login</a>
+                    </li>
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
+<!--                           data-toggle="dropdown" aria-expanded="false"-->
+<!--                           style="color: white; font-family: Montserrat; font-size: 20px;">-->
+<!--                            Больше-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">-->
+<!--                            <li><a class="dropdown-item" href="#" style="color: white; font-family: Montserrat;">Связаться-->
+<!--                                с поддержкой</a></li>-->
+<!--                            <li><a class="dropdown-item" href="#" style="color: white; font-family: Montserrat;">Для-->
+<!--                                издателей</a></li>-->
+<!--                            <li>-->
+<!--                                <hr class="dropdown-divider">-->
+<!--                            </li>-->
+
+<!--                        </ul>-->
+<!--                    </li>-->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid" style="background-color: #bcbabe;width: 95%; border-radius: 35px; margin-top: 25px;">
+        <form method="post" action="/sign_up" style="padding-top: 40px; padding-bottom: 40px;">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Firstname</label>
+                <input type="text" name="firstname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Lastname</label>
+                <input type="text" name="lastname" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Example: 21</div>
+            </div>
+<!--            <div class="mb-3">-->
+<!--                <label for="exampleInputEmail1" class="form-label">Age</label>-->
+<!--                <input type="number" name="age" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">-->
+<!--                <div id="emailHelp" class="form-text"></div>-->
+<!--            </div>-->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password Repeat</label>
+                <input type="password" name="password_repeat" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-dark">Sign Up</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

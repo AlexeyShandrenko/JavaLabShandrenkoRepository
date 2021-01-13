@@ -6,15 +6,15 @@
 
     <context:component-scan base-package="ru.itis.javalab"/>
 
-    <bean id="bCrypterService" class="ru.itis.javalab.services.BCrypterServiceImpl"/>
+<!--    <bean id="bCrypterService" class="ru.itis.javalab.services.BCrypterServiceImpl"/>-->
 
-    <bean id="cookieService" class="ru.itis.javalab.services.CookieServiceImpl">
-        <constructor-arg name="cookieRepository" ref="cookieRepository"/>
-    </bean>
+<!--    <bean id="cookieService" class="ru.itis.javalab.services.CookieServiceImpl">-->
+<!--        <constructor-arg name="cookieRepository" ref="cookieRepository"/>-->
+<!--    </bean>-->
 
-    <bean id="cookieRepository" class="ru.itis.javalab.repositories.CookieRepositoryImpl">
-        <constructor-arg name="namedParameterJdbcTemplate" ref="jdbcTemplate"/>
-    </bean>
+<!--    <bean id="cookieRepository" class="ru.itis.javalab.repositories.CookieRepositoryImpl">-->
+<!--        <constructor-arg name="namedParameterJdbcTemplate" ref="jdbcTemplate"/>-->
+<!--    </bean>-->
 
 <!--    <bean id="usersService" class="ru.itis.javalab.services.UsersServiceImpl">-->
 <!--        <constructor-arg name="usersRepository" ref="usersRepository"/>-->
