@@ -1,0 +1,11 @@
+ru\itis\javalab\chat\server\ChatServer.class
+ru\itis\javalab\chat\view\ChatView$1.class
+ru\itis\javalab\chat\view\ChatView.class
+ru\itis\javalab\chat\model\UserConfig.class
+ru\itis\javalab\chat\server\ClientThread.class
+ru\itis\javalab\chat\view\ConfigView$1.class
+ru\itis\javalab\chat\view\ConfigView.class
+ru\itis\javalab\app\ChatApplication.class
+ru\itis\javalab\chat\client\ClientThread.class
+ru\itis\javalab\chat\client\ChatClient.class
+ru\itis\javalab\chat\view\BaseView.class

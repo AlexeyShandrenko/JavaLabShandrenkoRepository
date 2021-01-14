@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 import ru.itis.javalab.repositories.CookieRepository;
 import ru.itis.javalab.repositories.CookieRepositoryImpl;
 import ru.itis.javalab.repositories.UsersRepository;
@@ -74,6 +76,22 @@ public class ApplicationConfig {
         hikariConfig.setPassword(environment.getProperty("db.password"));
         hikariConfig.setDriverClassName(environment.getProperty("db.driver-classname"));
         return hikariConfig;
+    }
+
+    @Bean
+    public FreeMarkerViewResolver freeMarkerViewResolver() {
+        FreeMarkerViewResolver resolver = new FreeMarkerViewResolver();
+        resolver.setPrefix("");
+        resolver.setSuffix(".ftlh");
+        resolver.setContentType("text/html;charset=UTF-8");
+        return resolver;
+    }
+
+    @Bean
+    public FreeMarkerConfigurer freeMarkerConfig() {
+        FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
+//        configurer.setTemplateLoaderPath("/WEB-INF/ftl");
+        return configurer;
     }
 
 }
