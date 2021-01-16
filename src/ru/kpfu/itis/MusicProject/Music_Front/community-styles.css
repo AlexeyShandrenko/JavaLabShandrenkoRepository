@@ -1,0 +1,91 @@
+*
+{
+    padding:0;
+    margin:0;
+    outline: 0;
+}
+.navbar-img
+{
+    display:block;
+    height:200px;
+    width: auto;
+    background: url(img/header-img.jpg) no-repeat center;
+}
+.navbar-brand
+{
+    margin-left: 150px;
+}
+.my-profile
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 170px;
+    text-decoration: none;
+    transition: color .15s
+}
+a:hover
+{
+    text-decoration: none!important;
+}
+.my-profile-name
+{
+    white-space: nowrap;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+    padding-right: 8px;
+    padding-top: 3px;
+}
+.bi-person-fill
+{
+    border: solid 1px #007bff;
+    border-radius:100px;
+    padding: 2px;
+}
+
+.search-box, .search-wrapper 
+{
+    position: relative;
+    padding: 10px;
+}
+.search-wrapper
+{
+    width: 300px;
+    margin-right: 312px;
+}
+.search-box 
+{
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 15px;
+    height: 35px;
+}
+.search-box:focus 
+{
+    box-shadow: 0 0 5px 5px rgb(235,235,235);
+}
+.main-content
+{
+    margin-top: 60px;
+    display: block;
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+.user-block
+{
+    background-color: rgb(248,249,250);
+    padding: 20px 30px 20px 30px;
+    margin-right: 20px;
+}
+.page-footer
+{
+    margin-top: 100px!important;
+    background-color: rgb(248,249,250);
+}
+.svg-pic
+{
+    float: left;
+    margin-top: 10px;
+    color: #007bff;
+}

@@ -1,0 +1,133 @@
+*
+{
+    padding:0;
+    margin:0;
+    outline: 0!important;
+}
+.navbar-img
+{
+    display:block;
+    height:200px;
+    width: auto;
+    background: url(img/header-img.jpg) no-repeat center;
+}
+.navbar-brand
+{
+    margin-left: 150px;
+}
+.my-profile
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 170px;
+    text-decoration: none;
+    transition: color .15s
+}
+a:hover
+{
+    text-decoration: none!important;
+}
+.my-profile-name
+{
+    white-space: nowrap;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+    padding-right: 8px;
+    padding-top: 3px;
+}
+.bi-person-fill
+{
+    border: solid 1px #007bff;
+    border-radius:100px;
+    padding: 2px;
+}
+
+.search-box, .search-wrapper 
+{
+    position: relative;
+    padding: 10px;
+}
+.search-wrapper
+{
+    width: 300px;
+    margin-right: 312px;
+}
+.search-box 
+{
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 15px;
+    height: 35px;
+}
+.search-box:focus 
+{
+    box-shadow: 0 0 5px 5px rgb(235,235,235);
+}
+a 
+{
+    color:#0000FF;
+    text-decoration:none; 
+}
+#wrapper
+{
+    margin-top: 30px!important;
+}
+#wrapper, #loginform 
+{
+    margin: auto;
+    padding-bottom:25px;
+    background:rgb(248, 249, 250);
+    width:504px;
+    border-radius: 10px;
+}
+#chatbox 
+{
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:270px;
+    width:430px;
+    border:1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    overflow:auto; 
+}
+#usermsg 
+{
+    width:355px;
+    border:1px solid rgb(204, 204, 204); 
+    margin-left: 36px;
+    padding-left: 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    font-size: 15px;
+    float: left;
+}
+#menu 
+{ 
+    padding: 20px 36px 12.5px 36px; 
+}
+.logout 
+{ 
+    float:right; 
+}
+#submitmsg
+{
+    background-color: #007bff;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 65px;
+    margin-top: 13px;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px 0 5px 0;
+}
+.page-footer
+{
+    margin-top: 80px!important;
+    background-color: rgb(248,249,250);
+}
