@@ -9,7 +9,7 @@
     display:block;
     height:200px;
     width: auto;
-    background: url(img/header-img.jpg) no-repeat center;
+    background: url(../src/main/webapp/front/img/header-img.jpg) no-repeat center;
 }
 .navbar-brand
 {

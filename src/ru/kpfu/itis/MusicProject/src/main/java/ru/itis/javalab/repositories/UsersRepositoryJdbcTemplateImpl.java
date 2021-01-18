@@ -13,6 +13,9 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
     private static final String SQL_FIND_ONE_BY_EMAIL = "select * from users where email = :email limit 1";
 
     //language=SQL
+    private static final String SQL_FIND_USER_BY_PASSWORD = "select * from users where password = :password limit 1";
+
+    //language=SQL
     private static final String SQL_FIND_BY_EMAIL_AND_PASSWORD = "select * from users where email = :email and password = :password limit 1";
 
     //language=SQL
@@ -56,6 +59,17 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
         try {
             return Optional.of(jdbcTemplate.queryForObject(SQL_FIND_ONE_BY_EMAIL,
                     Collections.singletonMap("email", email),
+                    userRowMapper));
+        } catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
+        }
+    }
+
+    @Override
+    public Optional<User> findUserByPassword(String password) {
+        try {
+            return Optional.of(jdbcTemplate.queryForObject(SQL_FIND_USER_BY_PASSWORD,
+                    Collections.singletonMap("password", password),
                     userRowMapper));
         } catch (EmptyResultDataAccessException e) {
             return Optional.empty();

@@ -14,5 +14,6 @@ public interface UsersService {
     void addUser(UserDto userDto);
     Optional<User> findUserByEmailAndPassword(String email, String password);
     Optional<User> findUserByEmail(String email);
+    Optional<User> findUserByPassword(String password);
     UserDto getUser(Long userId);
 }

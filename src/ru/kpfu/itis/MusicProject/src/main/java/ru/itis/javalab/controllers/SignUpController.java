@@ -46,7 +46,7 @@ public class SignUpController {
             map.put("password", request.getParameter("password"));
             map.put("age", request.getParameter("age"));
             usersService.saveUser(map);
-            return new ModelAndView("redirect:/sign_up");
+            return new ModelAndView("redirect:/sign_in");
         } else {
             return new ModelAndView("redirect:/sign_up");
         }

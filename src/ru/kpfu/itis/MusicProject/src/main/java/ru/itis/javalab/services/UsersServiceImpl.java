@@ -63,6 +63,11 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
+    public Optional<User> findUserByPassword(String password) {
+        return usersRepository.findUserByPassword(password);
+    }
+
+    @Override
     public UserDto getUser(Long userId) {
         return UserDto.from(usersRepository.findById(userId).orElse(null));
     }

@@ -2,14 +2,14 @@
 {
     padding:0;
     margin:0;
-    outline: 0;
+    outline: 0!important;
 }
 .navbar-img
 {
     display:block;
     height:200px;
     width: auto;
-    background: url(img/header-img.jpg) no-repeat center;
+    background: url(../img/header-img.jpg) no-repeat center;
 }
 .navbar-brand
 {
@@ -64,94 +64,38 @@ a:hover
 {
     box-shadow: 0 0 5px 5px rgb(235,235,235);
 }
-.main-content
+.main-content-back
 {
-    display:block;
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-top: 50px;
-}
-.left-side-content
-{
-    display: block;
-    margin-right: 50px;
-    margin-left: 110px;
-}
-.main-page-forums-list
-{
-    display: block;
-    margin-bottom: 0;
-    width: 710px;
-}
-.block-forums-list 
-{
-    display: block;
-}
-.forums-header
-{
-    display: block;
-    padding: 10px 10px 10px 10px;
-    background-color: rgb(248,249,250);
-    color: rgb(124,124,125);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.forum-title-block
-{
-    display: block;
-    margin: 20px 100px 20px 30px;
-}
-.forum-title
-{
-    font-size: 15px;
-}
-hr
-{
-    border: none; 
-    height: 0.1px; 
-}
-.forums-header-text
-{
-    font-size: 20px;
-    margin-bottom: 0;
-    letter-spacing: 0.3px;
-}
-.form-inline
-{
-    margin-right: 335px;
-}
-
-.right-side-content
-{
-    display: block;
-    float: right;
-}
-.page-footer
-{
-    margin-top: 100px!important;
-    background-color: rgb(248,249,250);
-}
-.btn-primary
-{
-    position: relative;
-    right: 150px;
-}
-.btn-2
-{
-    margin-top: -310px;
-}
-.edit-field
-{
-    text-align: center;
     display: block;
     margin: auto;
     background-color: rgb(248,249,250);
+    margin-top: 30px;
     width: 950px;   
+    height: 400px;
+    padding-top: 30px;
+    padding-left: 30px;
 }
-.edit-field-content
+.pic-btns
 {
-    padding: 30px;
+    position: relative;
+    float: left;
 }
-.save-btn
+.profile-pic
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.user-info
+{
+    position: relative;
+    margin-left: 250px;
+}
+.user-name-text
+{
+    font-size: 35px;
+}
+.photo-upload, .btn-primary, .save-btn
 {
     height: 30px;
     border: none;
@@ -163,11 +107,26 @@ hr
     cursor: pointer;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
 }
-.save-btn:hover
+.photo-upload:hover, .save-btn:hover
 {
     background-color: rgb(000, 105, 217);
 }
-.input-field
+.btns
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.page-footer
+{
+    margin-top: 80px!important;
+    background-color: rgb(248,249,250);
+}
+.save button
+{
+    margin-top: 20px;
+}
+.usrname, .email-input
 {
     margin-top: 10px;
     border-radius: 5px;
@@ -175,9 +134,9 @@ hr
     padding: 0 10px 0 10px;
     margin-bottom: 10px;
 }
-h4
+.form-control
 {
-    font-weight: 400!important;
+    width: 100px!important;
+    height: 40px!important;
+    margin-top: 10px;
 }
-
-
