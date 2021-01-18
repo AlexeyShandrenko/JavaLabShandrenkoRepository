@@ -15,6 +15,7 @@ import java.util.*;
 
 public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
 
+
     //language=SQL
     private static final String SQL_FIND_ONE_BY_EMAIL = "select * from users where email = :email limit 1";
 

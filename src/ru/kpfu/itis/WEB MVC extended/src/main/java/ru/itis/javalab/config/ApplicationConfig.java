@@ -42,6 +42,7 @@ public class ApplicationConfig {
     public CookieService cookieService() {
         return new CookieServiceImpl(cookieRepository());
     }
+
     @Bean
     public UsersService usersService() {
         return new UsersServiceImpl(usersRepository());

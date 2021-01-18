@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UsersRepository extends CrudRepository<User, Long> {
+
     Optional<User> findFirstByEmailAndPassword(String email, String pass);
     Optional<User> findUserByEmail(String email);
 }

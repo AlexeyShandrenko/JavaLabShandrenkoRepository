@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @Builder
 public class UserDto {
+
     private String firstname;
     private String lastname;
 
