@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             background-position: top;
-            background-image: url(/front/img/background.jpg);
+            background-image: url();
             font-family: "Arial";
         }
 

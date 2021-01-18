@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public interface UsersService {
+
     void saveUser(Map pool);
     List<User> getAllUser();
     List<UserDto> getAllUser(int page, int size);

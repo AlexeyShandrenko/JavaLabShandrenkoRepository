@@ -13,7 +13,7 @@
             display: block;
             height: 200px;
             width: auto;
-        <#--background-image: url(${img}) no-repeat center;-->
+        background-image: url("") no-repeat center;
         }
 
         .navbar-brand {
@@ -383,7 +383,7 @@
         <div class="navbar-img"><img src="" alt="..."></div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index-reg.html">ITIS MUSIC</a>
+            <a class="navbar-brand" href="/main_page">ABU MUSIC</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -392,16 +392,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../../../../Music_Front/community-reg.html">Community</a>
+                        <a class="nav-link" href="/community">Community</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../../../../Music_Front/gallery-reg.html">Gallery</a>
+                        <a class="nav-link" href="/playlist_rock">Playlist</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../../../../Music_Front/playlist-reg.html">Playlist</a>
+                        <a class="nav-link" href="/my_playlist">My Playlist</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../../../../Music_Front/FAQ-reg.html">FAQ</a>
+                        <a class="nav-link" href="/faq">FAQ</a>
                     </li>
                 </ul>
             </div>
@@ -461,7 +461,7 @@
         </div>
         <footer class="page-footer font-small blue">
             <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="https://vk.com/itis_music">ITIS Music</a>
+                <a href="">ABU Music</a>
             </div>
         </footer>
 
