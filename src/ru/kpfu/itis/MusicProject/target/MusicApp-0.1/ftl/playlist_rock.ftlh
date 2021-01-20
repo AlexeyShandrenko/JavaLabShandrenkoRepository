@@ -176,7 +176,7 @@
                 </div>
                 <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
                 <form method="post" action="/playlist_rock">
-                    <input type="submit" name="backinblack" class="btn btn-secondary">
+                    <input type="submit" name="backinblack" class="btn btn-secondary" value="+">
                 </form>
             </div>
             <div class="block-track">
@@ -186,6 +186,9 @@
                     <a class="track-name">Sweet Emotion</a>
                 </div>
                 <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+                <form method="post" action="/playlist_rock">
+                    <input type="submit" name="sweet_emotion" class="btn btn-secondary" value="+">
+                </form>
             </div>
             <div class="block-track">
                 <div class="track-info">
@@ -194,6 +197,9 @@
                     <a class="track-name">The Chain</a>
                 </div>
                 <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+                <form method="post" action="/playlist_rock">
+                    <input type="submit" name="chain" class="btn btn-secondary" value="+">
+                </form>
             </div>
         </div>
     </div>

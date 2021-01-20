@@ -35,6 +35,16 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
+    public void updateUser(Map pool) {
+        User user = User.builder()
+                .firstname((String) pool.get("firstname"))
+                .lastname((String) pool.get("lastname"))
+                .age((String) pool.get("age"))
+                .build();
+        usersRepository.update(user, (Long) pool.get("id"));
+    }
+
+    @Override
     public List<User> getAllUser() {
         return usersRepository.findAll();
     }
@@ -71,4 +81,5 @@ public class UsersServiceImpl implements UsersService {
     public UserDto getUser(Long userId) {
         return UserDto.from(usersRepository.findById(userId).orElse(null));
     }
+
 }

@@ -17,4 +17,5 @@ public interface UsersService {
     Optional<User> findUserByEmail(String email);
     Optional<User> findUserByPassword(String password);
     UserDto getUser(Long userId);
+    void updateUser(Map pool);
 }

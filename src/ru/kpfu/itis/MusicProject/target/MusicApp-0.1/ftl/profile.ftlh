@@ -206,7 +206,7 @@
                     <button type="button" class="photo-upload" data-toggle="modal" data-target="#myModal">Change
                         avatar
                     </button>
-                    <a href="../../../../../Music_Front/edit-profile.html">
+                    <a href="/edit_profile">
                         <button type="button" class="btn-primary">Edit profile</button>
                     </a>
                 </div>

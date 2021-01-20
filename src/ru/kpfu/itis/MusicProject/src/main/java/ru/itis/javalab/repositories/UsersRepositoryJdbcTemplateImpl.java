@@ -23,6 +23,9 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
             "values (:firstname, :lastname, :email, :password, :age)";
 
     //language=SQL
+    private static final String SQL_UPDATE_USER = "update users set firstname = :firstname, lastname = :lastname, age = :age where id = :id";
+
+    //language=SQL
 //    private static final String SQL_INSERT_USER = "insert into users (firstname, lastname) values (:firstname, :lastname)";
 
     //language=SQL
@@ -101,8 +104,12 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
     }
 
     @Override
-    public void update(User entity) {
-
+    public void update(User entity, Long id) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("firstname", entity.getFirstname());
+        params.put("lastname", entity.getLastname());
+        params.put("age", entity.getAge());
+        jdbcTemplate.update("update users set firstname = :firstname, lastname = :lastname, age = :age where id =" + id, params);
     }
 
     @Override

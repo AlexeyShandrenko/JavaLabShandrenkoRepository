@@ -451,13 +451,13 @@
                     </ol>
                 </ol>
             </div>
-            <div class="right-side-content">
-                <div class="add-chat-btn">
-                    <a href="../../../../../../Music_Front/add-chat.html">
-                        <button type="button" class="btn btn-primary btn-2">Create new chat</button>
-                    </a>
-                </div>
-            </div>
+<#--            <div class="right-side-content">-->
+<#--                <div class="add-chat-btn">-->
+<#--                    <a href="../../../../../../Music_Front/add-chat.html">-->
+<#--                        <button type="button" class="btn btn-primary btn-2">Create new chat</button>-->
+<#--                    </a>-->
+<#--                </div>-->
+<#--            </div>-->
         </div>
         <footer class="page-footer font-small blue">
             <div class="footer-copyright text-center py-3">© 2020 Copyright:
