@@ -13,7 +13,7 @@
             display: block;
             height: 200px;
             width: auto;
-        background-image: url("") no-repeat center;
+        background: url(https://static.hollywoodreporter.com/sites/default/files/2016/11/thr3_music2-h_2016.jpg) no-repeat center;
         }
 
         .navbar-brand {
@@ -380,7 +380,7 @@
 <#--    </style>-->
 <#macro content>
 <#--    <#if image??>-->
-        <div class="navbar-img"><img src="" alt="..."></div>
+        <div class="navbar-img"></div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/main_page">ABU MUSIC</a>

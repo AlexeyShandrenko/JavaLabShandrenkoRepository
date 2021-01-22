@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             background-position: top;
-            background-image: url();
+            background-image: url(https://static.tumblr.com/918c6a8c8a6db456611409460d660e71/zocfpr0/1Fvpsgdmh/tumblr_static_tumblr_static_8clfch985e0440w8sswskk0kk_focused_v3.jpg);
             font-family: "Arial";
         }
 

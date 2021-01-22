@@ -104,6 +104,11 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
     }
 
     @Override
+    public void add(User entity) {
+
+    }
+
+    @Override
     public void update(User entity, Long id) {
         Map<String, Object> params = new HashMap<>();
         params.put("firstname", entity.getFirstname());

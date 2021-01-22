@@ -13,7 +13,7 @@
             display: block;
             height: 200px;
             width: auto;
-            background: url(../img/header-img.jpg) no-repeat center;
+            background: url(https://static.hollywoodreporter.com/sites/default/files/2016/11/thr3_music2-h_2016.jpg) no-repeat center;
         }
 
         .navbar-brand {
@@ -168,32 +168,22 @@
 <#--            </div>-->
 <#--        </div>-->
 
-<#--        <div class="main-playlist">-->
-<#--            <div class="block-track">-->
-<#--                <div class="track-info">-->
-<#--                    <a class="artist-name">AC/DC</a>-->
-<#--                    <a>-</a>-->
-<#--                    <a class="track-name">Back In Black</a>-->
-<#--                </div>-->
-<#--                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>-->
-<#--            </div>-->
-<#--            <div class="block-track">-->
-<#--                <div class="track-info">-->
-<#--                    <a class="artist-name">Aerosmith</a>-->
-<#--                    <a>-</a>-->
-<#--                    <a class="track-name">Sweet Emotion</a>-->
-<#--                </div>-->
-<#--                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>-->
-<#--            </div>-->
-<#--            <div class="block-track">-->
-<#--                <div class="track-info">-->
-<#--                    <a class="artist-name">Fleetwood Mac</a>-->
-<#--                    <a>-</a>-->
-<#--                    <a class="track-name">The Chain</a>-->
-<#--                </div>-->
-<#--                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>-->
-<#--            </div>-->
-<#--        </div>-->
+        <#if tracks??>
+        <#list tracks as track>
+        <div class="main-playlist">
+            <div class="block-track">
+                <div class="track-info">
+                    <a class="artist-name">${track.artist_name}</a>
+                    <a>-</a>
+                    <a class="track-name">${track.track_name}</a>
+                </div>
+                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+            </div>
+        </div>
+        </#list>
+            <#else>
+            <h1>Your playlist is empty! Please, add tracks.</h1>
+        </#if>
     </div>
     <footer class="page-footer font-small blue">
         <div class="footer-copyright text-center py-3">© 2020 Copyright:

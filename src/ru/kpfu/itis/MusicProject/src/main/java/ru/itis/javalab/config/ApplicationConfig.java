@@ -13,12 +13,11 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 import ru.itis.javalab.models.ImageBackground;
+import ru.itis.javalab.repositories.TracksRepository;
+import ru.itis.javalab.repositories.TracksRepositoryJdbcTemplateImpl;
 import ru.itis.javalab.repositories.UsersRepository;
 import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
-import ru.itis.javalab.services.BCrypterService;
-import ru.itis.javalab.services.BCrypterServiceImpl;
-import ru.itis.javalab.services.UsersService;
-import ru.itis.javalab.services.UsersServiceImpl;
+import ru.itis.javalab.services.*;
 
 import javax.sql.DataSource;
 
@@ -43,6 +42,16 @@ public class ApplicationConfig {
     @Bean
     public UsersRepository usersRepository() {
         return new UsersRepositoryJdbcTemplateImpl(jdbcTemplate());
+    }
+
+    @Bean
+    public TrackService trackService() {
+        return new TrackServiceImpl(tracksRepository());
+    }
+
+    @Bean
+    public TracksRepository tracksRepository() {
+        return new TracksRepositoryJdbcTemplateImpl(jdbcTemplate());
     }
 
     @Bean

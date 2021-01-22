@@ -13,7 +13,7 @@
             display: block;
             height: 200px;
             width: auto;
-            background: url(../img/header-img.jpg) no-repeat center;
+            background: url(https://static.hollywoodreporter.com/sites/default/files/2016/11/thr3_music2-h_2016.jpg) no-repeat center;
         }
 
         .navbar-brand {
@@ -168,39 +168,41 @@
             </div>
         </div>
         <div class="main-playlist">
-            <div class="block-track">
-                <div class="track-info">
-                    <a class="artist-name">AC/DC</a>
-                    <a>-</a>
-                    <a class="track-name">Back In Black</a>
+            <form method="post" action="/playlist_rock1">
+                <div class="block-track">
+                    <div class="track-info">
+                        <a name="artist_name" class="artist-name">AC/DC</a>
+                        <a>-</a>
+                        <a name="track_name" class="track-name">Back In Black</a>
+                    </div>
+                    <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+                    <#--                <form method="post" action="/playlist_rock1">-->
+                    <input type="submit" class="btn btn-secondary" value="+">
+                    <#--                </form>-->
                 </div>
-                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
-                <form method="post" action="/playlist_rock">
-                    <input type="submit" name="backinblack" class="btn btn-secondary" value="+">
-                </form>
-            </div>
-            <div class="block-track">
-                <div class="track-info">
-                    <a class="artist-name">Aerosmith</a>
-                    <a>-</a>
-                    <a class="track-name">Sweet Emotion</a>
+            </form>
+            <form method="post" action="/playlist_rock2">
+                <div class="block-track">
+                    <div class="track-info">
+                        <a class="artist-name">Aerosmith</a>
+                        <a>-</a>
+                        <a class="track-name">Sweet Emotion</a>
+                    </div>
+                    <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+                    <input type="submit" class="btn btn-secondary" value="+">
                 </div>
-                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
-                <form method="post" action="/playlist_rock">
-                    <input type="submit" name="sweet_emotion" class="btn btn-secondary" value="+">
-                </form>
-            </div>
-            <div class="block-track">
-                <div class="track-info">
-                    <a class="artist-name">Fleetwood Mac</a>
-                    <a>-</a>
-                    <a class="track-name">The Chain</a>
+            </form>
+            <form method="post" action="/playlist_rock3">
+                <div class="block-track">
+                    <div class="track-info">
+                        <a class="artist-name">Fleetwood Mac</a>
+                        <a>-</a>
+                        <a class="track-name">The Chain</a>
+                    </div>
+                    <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+                    <input type="submit" class="btn btn-secondary" value="+">
                 </div>
-                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
-                <form method="post" action="/playlist_rock">
-                    <input type="submit" name="chain" class="btn btn-secondary" value="+">
-                </form>
-            </div>
+            </form>
         </div>
     </div>
     <footer class="page-footer font-small blue">

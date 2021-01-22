@@ -1,10 +1,12 @@
 package ru.itis.javalab.repositories;
 
-import ru.itis.javalab.models.Track;
 import ru.itis.javalab.models.User;
+import ru.itis.javalab.models.UserPlaylist;
 
-public interface TracksRepository extends CrudRepository<Track, Long> {
+import java.util.List;
+import java.util.Optional;
 
 
-
+public interface TracksRepository extends CrudRepository<UserPlaylist, Long> {
+    List<UserPlaylist> findTracksById(Long id);
 }

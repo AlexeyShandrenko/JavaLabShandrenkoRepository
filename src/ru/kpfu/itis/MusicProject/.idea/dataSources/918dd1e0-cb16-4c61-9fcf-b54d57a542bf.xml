@@ -785,7 +785,7 @@ false Z
 false Zulu
 false posixrules
 </TimeZones>
-      <StartupTime>1610891751</StartupTime>
+      <StartupTime>1610907433</StartupTime>
     </root>
     <database id="2" parent="1" name="Javalab_2020">
       <ObjectId>49539</ObjectId>
@@ -800,7 +800,7 @@ false posixrules
       <ObjectId>13318</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1359</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1378</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|49400|49402|1
 sequence|table|49487|49489|1
@@ -869,7 +869,7 @@ sequence|table|49521|49523|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1360</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1379</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="19" parent="4" name="heap">
@@ -1023,7 +1023,7 @@ sequence|table|49521|49523|1
     <table id="45" parent="18" name="tracks">
       <ObjectId>49450</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>689</StateNumber>
+      <StateNumber>1370</StateNumber>
     </table>
     <table id="46" parent="18" name="users">
       <ObjectId>49402</ObjectId>
@@ -1033,7 +1033,7 @@ sequence|table|49521|49523|1
     <table id="47" parent="18" name="users_playlist">
       <ObjectId>49466</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>692</StateNumber>
+      <StateNumber>1377</StateNumber>
     </table>
     <column id="48" parent="40" name="artist_id">
       <Position>1</Position>
@@ -1289,21 +1289,27 @@ sequence|table|49521|49523|1
       <StateNumber>689</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="84" parent="45" name="tracks_pkey">
+    <column id="84" parent="45" name="artist_name">
+      <Position>11</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1370</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="85" parent="45" name="tracks_pkey">
       <ObjectId>49457</ObjectId>
       <StateNumber>689</StateNumber>
       <ColNames>track_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="85" parent="45" name="tracks_pkey">
+    <key id="86" parent="45" name="tracks_pkey">
       <ObjectId>49458</ObjectId>
       <StateNumber>689</StateNumber>
       <ColNames>track_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tracks_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="86" parent="45" name="tracks_playlist_id_fkey">
+    <foreign-key id="87" parent="45" name="tracks_playlist_id_fkey">
       <ObjectId>49459</ObjectId>
       <StateNumber>689</StateNumber>
       <ColNames>playlist_id</ColNames>
@@ -1313,7 +1319,7 @@ sequence|table|49521|49523|1
       <RefKeyName>playlists_pkey</RefKeyName>
       <RefColNames>playlist_id</RefColNames>
     </foreign-key>
-    <column id="87" parent="46" name="id">
+    <column id="88" parent="46" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1321,51 +1327,51 @@ sequence|table|49521|49523|1
       <DefaultExpression>nextval(&apos;users_user_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="88" parent="46" name="email">
+    <column id="89" parent="46" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1346</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="89" parent="46" name="password">
+    <column id="90" parent="46" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1349</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="90" parent="46" name="age">
+    <column id="91" parent="46" name="age">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>1358</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="91" parent="46" name="firstname">
+    <column id="92" parent="46" name="firstname">
       <Position>10</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1340</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="92" parent="46" name="lastname">
+    <column id="93" parent="46" name="lastname">
       <Position>11</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1343</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="93" parent="46" name="users_pkey">
+    <index id="94" parent="46" name="users_pkey">
       <ObjectId>49409</ObjectId>
       <StateNumber>1358</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="94" parent="46" name="users_pkey">
+    <key id="95" parent="46" name="users_pkey">
       <ObjectId>49410</ObjectId>
       <StateNumber>674</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
-    <column id="95" parent="47" name="user_playlist_id">
+    <column id="96" parent="47" name="user_playlist_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1373,45 +1379,57 @@ sequence|table|49521|49523|1
       <DefaultExpression>nextval(&apos;users_playlist_user_playlist_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="96" parent="47" name="user_id">
+    <column id="97" parent="47" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>692</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="97" parent="47" name="user_playlist_name">
+    <column id="98" parent="47" name="user_playlist_name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>692</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="98" parent="47" name="user_playlist_description">
+    <column id="99" parent="47" name="user_playlist_description">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>692</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="99" parent="47" name="track_id">
+    <column id="100" parent="47" name="track_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>692</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="100" parent="47" name="users_playlist_pkey">
+    <column id="101" parent="47" name="artist_name">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1374</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="102" parent="47" name="track_name">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1377</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="103" parent="47" name="users_playlist_pkey">
       <ObjectId>49473</ObjectId>
       <StateNumber>692</StateNumber>
       <ColNames>user_playlist_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="101" parent="47" name="users_playlist_pkey">
+    <key id="104" parent="47" name="users_playlist_pkey">
       <ObjectId>49474</ObjectId>
       <StateNumber>692</StateNumber>
       <ColNames>user_playlist_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_playlist_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="102" parent="47" name="users_playlist_user_id_fkey">
+    <foreign-key id="105" parent="47" name="users_playlist_user_id_fkey">
       <ObjectId>49475</ObjectId>
       <StateNumber>692</StateNumber>
       <ColNames>user_id</ColNames>
@@ -1419,9 +1437,9 @@ sequence|table|49521|49523|1
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
-      <RefColNames>user_id</RefColNames>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="103" parent="47" name="users_playlist_track_id_fkey">
+    <foreign-key id="106" parent="47" name="users_playlist_track_id_fkey">
       <ObjectId>49480</ObjectId>
       <StateNumber>692</StateNumber>
       <ColNames>track_id</ColNames>

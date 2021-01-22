@@ -13,7 +13,7 @@
             display: block;
             height: 200px;
             width: auto;
-            background: url(../img/header-img.jpg) no-repeat center;
+            background: url(https://static.hollywoodreporter.com/sites/default/files/2016/11/thr3_music2-h_2016.jpg) no-repeat center;
         }
 
         .navbar-brand {
@@ -199,7 +199,7 @@
         <div class="main-content">
             <div class="pic-btns">
                 <div class="prof-pic">
-                    <img src="../../../../../Music_Front/img/beer.jpg" class="profile-pic">
+                    <img src="https://i.pinimg.com/736x/50/9c/80/509c80eedb8aa73978d8fbd87de4e125.jpg" class="profile-pic">
                 </div>
 
                 <div class="btns">

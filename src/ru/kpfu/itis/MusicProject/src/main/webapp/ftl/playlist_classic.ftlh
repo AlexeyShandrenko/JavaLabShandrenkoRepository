@@ -13,7 +13,7 @@
             display: block;
             height: 200px;
             width: auto;
-            background: url(../img/header-img.jpg) no-repeat center;
+            background: url(https://static.hollywoodreporter.com/sites/default/files/2016/11/thr3_music2-h_2016.jpg) no-repeat center;
         }
 
         .navbar-brand {
@@ -113,7 +113,8 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/main_page">ABU MUSIC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -135,52 +136,71 @@
         </div>
         <div class="search-wrapper">
             <form>
-                <input type="text" name="focus" required class="search-box" placeholder="Search" />
+                <input type="text" name="focus" required class="search-box" placeholder="Search"/>
             </form>
         </div>
         <a href="/profile" class="my-profile">
             <div class="my-profile-name">
                 My profile
             </div>
-            <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                      d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
             </svg>
         </a>
     </nav>
     <div class="main-content">
         <div class="btns-group">
             <div class="btn-group" role="group" aria-label="Basic example">
-                <a href="/playlist_rock"><button type="button" class="btn btn-secondary">Rock</button></a>
-                <a href="/playlist_pop"><button type="button" class="btn btn-secondary">Pop</button></a>
-                <a href="/playlist_classic"><button type="button" class="btn btn-secondary_classic">Classical</button></a>
-                <a href="/playlist_hiphop"><button type="button" class="btn btn-secondary">Hip-Hop</button></a>
+                <a href="/playlist_rock">
+                    <button type="button" class="btn btn-secondary">Rock</button>
+                </a>
+                <a href="/playlist_pop">
+                    <button type="button" class="btn btn-secondary">Pop</button>
+                </a>
+                <a href="/playlist_classic">
+                    <button type="button" class="btn btn-secondary_classic">Classical</button>
+                </a>
+                <a href="/playlist_hiphop">
+                    <button type="button" class="btn btn-secondary">Hip-Hop</button>
+                </a>
             </div>
         </div>
         <div class="main-playlist">
-            <div class="block-track">
-                <div class="track-info">
-                    <a class="artist-name">Claude Debussy</a>
-                    <a>-</a>
-                    <a class="track-name">Clair De Lune</a>
+            <form method="post" action="/playlist_classic1">
+                <div class="block-track">
+                    <div class="track-info">
+                        <a class="artist-name">Claude Debussy</a>
+                        <a>-</a>
+                        <a class="track-name">Clair De Lune</a>
+                    </div>
+                    <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+                    <input type="submit" class="btn btn-secondary" value="+">
                 </div>
-                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
-            </div>
-            <div class="block-track">
-                <div class="track-info">
-                    <a class="artist-name">Ludvig Van Beethoven</a>
-                    <a>-</a>
-                    <a class="track-name">Moonlight Sonata</a>
+            </form>
+            <form method="post" action="/playlist_classic2">
+                <div class="block-track">
+                    <div class="track-info">
+                        <a class="artist-name">Ludvig Van Beethoven</a>
+                        <a>-</a>
+                        <a class="track-name">Moonlight Sonata</a>
+                    </div>
+                    <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+                    <input type="submit" class="btn btn-secondary" value="+">
                 </div>
-                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
-            </div>
-            <div class="block-track">
-                <div class="track-info">
-                    <a class="artist-name">Ricahrd Wagner</a>
-                    <a>-</a>
-                    <a class="track-name">The Valkerie</a>
+            </form>
+            <form method="post" action="/playlist_classic3">
+                <div class="block-track">
+                    <div class="track-info">
+                        <a class="artist-name">Richard Wagner</a>
+                        <a>-</a>
+                        <a class="track-name">The Valkerie</a>
+                    </div>
+                    <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
+                    <input type="submit" class="btn btn-secondary" value="+">
                 </div>
-                <audio id="audio" src="../music/Joji,%20Lil%20Yachty%20-%20pretty%20boy.mp3" controls></audio>
-            </div>
+            </form>
         </div>
     </div>
     <footer class="page-footer font-small blue">

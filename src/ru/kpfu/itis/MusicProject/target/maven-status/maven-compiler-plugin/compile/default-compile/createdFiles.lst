@@ -1,7 +1,5 @@
 ru\itis\javalab\controllers\PlaylistClassicController.class
-ru\itis\javalab\models\Track$TrackBuilder.class
 ru\itis\javalab\services\TrackServiceImpl.class
-ru\itis\javalab\models\Track.class
 ru\itis\javalab\controllers\MyPlaylistController.class
 ru\itis\javalab\services\UsersService.class
 ru\itis\javalab\controllers\EditProfileController.class
@@ -16,8 +14,9 @@ ru\itis\javalab\controllers\MainPageController.class
 ru\itis\javalab\dto\UserDto.class
 ru\itis\javalab\models\ImageBackground.class
 ru\itis\javalab\services\TrackService.class
+ru\itis\javalab\controllers\PlaylistHipHopController.class
 ru\itis\javalab\repositories\TracksRepository.class
-ru\itis\javalab\controllers\PlayistHipHopController.class
+ru\itis\javalab\repositories\TracksRepositoryJdbcTemplateImpl.class
 ru\itis\javalab\repositories\UsersRepository.class
 ru\itis\javalab\controllers\ProfileController.class
 ru\itis\javalab\services\BCrypterServiceImpl.class
@@ -28,3 +27,5 @@ ru\itis\javalab\controllers\SignInController.class
 ru\itis\javalab\models\User$UserBuilder.class
 ru\itis\javalab\controllers\PlaylistRockController.class
 ru\itis\javalab\dto\UserDto$UserDtoBuilder.class
+ru\itis\javalab\models\UserPlaylist.class
+ru\itis\javalab\models\UserPlaylist$UserPlaylistBuilder.class

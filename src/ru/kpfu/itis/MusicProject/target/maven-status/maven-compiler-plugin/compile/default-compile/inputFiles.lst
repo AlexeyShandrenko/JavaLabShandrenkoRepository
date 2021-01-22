@@ -5,8 +5,8 @@ D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\services\BCrypterService.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\PlaylistPopController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\EditProfileController.java
-D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\PlayistHipHopController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\SignInController.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\models\UserPlaylist.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\PlaylistRockController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\CommunityController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\ProfileController.java
@@ -21,7 +21,8 @@ D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\repositories\TracksRepository.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\dto\UserDto.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\FAQController.java
-D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\models\Track.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\PlaylistHipHopController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\repositories\UsersRepositoryJdbcTemplateImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\controllers\MyPlaylistController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\models\ImageBackground.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\MusicProject\src\main\java\ru\itis\javalab\repositories\TracksRepositoryJdbcTemplateImpl.java
