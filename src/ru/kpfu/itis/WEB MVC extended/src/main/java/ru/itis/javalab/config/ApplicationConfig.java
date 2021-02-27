@@ -1,6 +1,5 @@
 package ru.itis.javalab.config;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,19 +9,19 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 import ru.itis.javalab.repositories.CookieRepository;
 import ru.itis.javalab.repositories.CookieRepositoryImpl;
-import ru.itis.javalab.repositories.UsersRepository;
-import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
 import ru.itis.javalab.services.*;
 
 import javax.sql.DataSource;
 
+@EnableWebMvc
 @Configuration
 @ComponentScan("ru.itis.javalab")
-@PropertySource("classpath:db.properties")
+@PropertySource("classpath:application.properties")
 public class ApplicationConfig {
 
     @Autowired
@@ -43,16 +42,6 @@ public class ApplicationConfig {
         return new CookieServiceImpl(cookieRepository());
     }
 
-    @Bean
-    public UsersService usersService() {
-        return new UsersServiceImpl(usersRepository());
-    }
-
-     @Bean
-     public UsersRepository usersRepository() {
-        return new UsersRepositoryJdbcTemplateImpl(jdbcTemplate());
-     }
-
      @Bean
      public NamedParameterJdbcTemplate jdbcTemplate() {
         return new NamedParameterJdbcTemplate(dataSource());
@@ -61,11 +50,6 @@ public class ApplicationConfig {
     @Bean
     public DataSource dataSource() {
         return new HikariDataSource(hikariConfig());
-    }
-
-    @Bean
-    public ObjectMapper objectMapper() {
-        return new ObjectMapper();
     }
 
     @Bean

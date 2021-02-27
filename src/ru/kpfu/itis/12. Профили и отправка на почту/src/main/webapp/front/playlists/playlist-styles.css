@@ -1,0 +1,99 @@
+*
+{
+    padding:0;
+    margin:0;
+    outline: 0;
+}
+.navbar-img
+{
+    display:block;
+    height:200px;
+    width: auto;
+    background: url(../img/header-img.jpg) no-repeat center;
+}
+.navbar-brand
+{
+    margin-left: 150px;
+}
+.my-profile
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 170px;
+    text-decoration: none;
+    transition: color .15s
+}
+a:hover
+{
+    text-decoration: none!important;
+}
+.my-profile-name
+{
+    white-space: nowrap;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+    padding-right: 8px;
+    padding-top: 3px;
+}
+.bi-person-fill
+{
+    border: solid 1px #007bff;
+    border-radius:100px;
+    padding: 2px;
+}
+
+.search-box, .search-wrapper 
+{
+    position: relative;
+    padding: 10px;
+}
+.search-wrapper
+{
+    width: 300px;
+    margin-right: 312px;
+}
+.search-box 
+{
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 15px;
+    height: 35px;
+}
+.search-box:focus 
+{
+    box-shadow: 0 0 5px 5px rgb(235,235,235);
+}
+.main-content
+{
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.btn-secondary
+{
+    background-color: rgb(035, 079, 085)!important;
+    border-color: rgb(001, 053, 071)!important;
+}
+.main-playlist
+{
+    margin-top: 30px;
+}
+.track-info
+{
+    margin-top: 10px;
+}
+#audio
+{
+    margin-top: 10px;
+}
+.page-footer
+{
+    margin-top: 100px!important;
+    background-color: rgb(248,249,250);
+}
+.btn-primary
+{
+    position: relative;
+    right: 150px;
+}

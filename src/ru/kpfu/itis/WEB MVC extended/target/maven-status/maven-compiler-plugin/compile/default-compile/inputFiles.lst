@@ -1,6 +1,8 @@
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\WEB MVC extended\src\main\java\ru\itis\javalab\services\BCrypterService.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\WEB MVC extended\src\main\java\ru\itis\javalab\repositories\CookieRepository.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\WEB MVC extended\src\main\java\ru\itis\javalab\services\UsersService.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\WEB MVC extended\src\main\java\ru\itis\javalab\config\ApplicationInitializer.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\WEB MVC extended\src\main\java\ru\itis\javalab\repositories\UsersRepositoryFakeImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\WEB MVC extended\src\main\java\ru\itis\javalab\models\Cookies.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\WEB MVC extended\src\main\java\ru\itis\javalab\config\ApplicationConfig.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\WEB MVC extended\src\main\java\ru\itis\javalab\controllers\UsersController.java

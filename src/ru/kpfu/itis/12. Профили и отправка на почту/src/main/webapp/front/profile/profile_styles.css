@@ -1,0 +1,142 @@
+*
+{
+    padding:0;
+    margin:0;
+    outline: 0!important;
+}
+.navbar-img
+{
+    display:block;
+    height:200px;
+    width: auto;
+    background: url(../img/header-img.jpg) no-repeat center;
+}
+.navbar-brand
+{
+    margin-left: 150px;
+}
+.my-profile
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 170px;
+    text-decoration: none;
+    transition: color .15s
+}
+a:hover
+{
+    text-decoration: none!important;
+}
+.my-profile-name
+{
+    white-space: nowrap;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+    padding-right: 8px;
+    padding-top: 3px;
+}
+.bi-person-fill
+{
+    border: solid 1px #007bff;
+    border-radius:100px;
+    padding: 2px;
+}
+
+.search-box, .search-wrapper 
+{
+    position: relative;
+    padding: 10px;
+}
+.search-wrapper
+{
+    width: 300px;
+    margin-right: 312px;
+}
+.search-box 
+{
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 15px;
+    height: 35px;
+}
+.search-box:focus 
+{
+    box-shadow: 0 0 5px 5px rgb(235,235,235);
+}
+.main-content-back
+{
+    display: block;
+    margin: auto;
+    background-color: rgb(248,249,250);
+    margin-top: 30px;
+    width: 950px;   
+    height: 400px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.pic-btns
+{
+    position: relative;
+    float: left;
+}
+.profile-pic
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.user-info
+{
+    position: relative;
+    margin-left: 250px;
+}
+.user-name-text
+{
+    font-size: 35px;
+}
+.photo-upload, .btn-primary, .save-btn
+{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    margin-top: 10px;
+    width: 200px; 
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+}
+.photo-upload:hover, .save-btn:hover
+{
+    background-color: rgb(000, 105, 217);
+}
+.btns
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.page-footer
+{
+    margin-top: 80px!important;
+    background-color: rgb(248,249,250);
+}
+.save button
+{
+    margin-top: 20px;
+}
+.usrname, .email-input
+{
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 0 10px 0 10px;
+    margin-bottom: 10px;
+}
+.form-control
+{
+    width: 100px!important;
+    height: 40px!important;
+    margin-top: 10px;
+}
