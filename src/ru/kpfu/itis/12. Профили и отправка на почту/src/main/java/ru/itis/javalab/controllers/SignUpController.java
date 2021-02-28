@@ -1,18 +1,21 @@
 package ru.itis.javalab.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ru.itis.javalab.services.UsersService;
 
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 
 @Controller
+@Profile("master")
 public class SignUpController {
 
     @Autowired
@@ -34,8 +37,12 @@ public class SignUpController {
             map.put("email", request.getParameter("email"));
             map.put("password", request.getParameter("password"));
             map.put("age", request.getParameter("age"));
-            usersService.saveUser(map);
-            return new ModelAndView("redirect:/sign_in");
+            try {
+                usersService.saveUser(map);
+            } catch (MessagingException e) {
+                throw new IllegalArgumentException(e);
+            }
+            return new ModelAndView("redirect:/notification");
         } else {
             return new ModelAndView("redirect:/sign_up");
         }

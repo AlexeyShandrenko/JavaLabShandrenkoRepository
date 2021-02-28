@@ -1,29 +1,30 @@
 package ru.itis.javalab.config;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import freemarker.template.TemplateExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.ClassRelativeResourceLoader;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.ui.freemarker.SpringTemplateLoader;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
-import ru.itis.javalab.models.ImageBackground;
-import ru.itis.javalab.repositories.TracksRepository;
-import ru.itis.javalab.repositories.TracksRepositoryJdbcTemplateImpl;
-import ru.itis.javalab.repositories.UsersRepository;
-import ru.itis.javalab.repositories.UsersRepositoryJdbcTemplateImpl;
 import ru.itis.javalab.services.*;
 
 import javax.sql.DataSource;
+import java.util.Properties;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
+@EnableWebMvc
 @Configuration
 @ComponentScan("ru.itis.javalab")
-@PropertySource("classpath:db.properties")
+@PropertySource("classpath:application.properties")
 public class ApplicationConfig {
 
     @Autowired
@@ -35,26 +36,6 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public UsersService usersService() {
-        return new UsersServiceImpl(usersRepository());
-    }
-
-    @Bean
-    public UsersRepository usersRepository() {
-        return new UsersRepositoryJdbcTemplateImpl(jdbcTemplate());
-    }
-
-    @Bean
-    public TrackService trackService() {
-        return new TrackServiceImpl(tracksRepository());
-    }
-
-    @Bean
-    public TracksRepository tracksRepository() {
-        return new TracksRepositoryJdbcTemplateImpl(jdbcTemplate());
-    }
-
-    @Bean
     public NamedParameterJdbcTemplate jdbcTemplate() {
         return new NamedParameterJdbcTemplate(dataSource());
     }
@@ -62,11 +43,6 @@ public class ApplicationConfig {
     @Bean
     public DataSource dataSource() {
         return new HikariDataSource(hikariConfig());
-    }
-
-    @Bean
-    public ObjectMapper objectMapper() {
-        return new ObjectMapper();
     }
 
     @Bean
@@ -96,7 +72,38 @@ public class ApplicationConfig {
         return configurer;
     }
 
+    @Bean
+    public freemarker.template.Configuration configuration() {
+         freemarker.template.Configuration configuration = new freemarker.template.Configuration(freemarker.template.Configuration.VERSION_2_3_30);
+         configuration.setDefaultEncoding("UTF-8");
+         configuration.setTemplateLoader(
+                 new SpringTemplateLoader(new ClassRelativeResourceLoader(this.getClass()),
+                         "/"));
+        configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
+        return configuration;
+    }
 
+    @Bean
+    public ExecutorService executorService() {
+        return Executors.newCachedThreadPool();
+    }
 
+    @Bean
+    public JavaMailSender getJavaMailSender() {
+        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+        mailSender.setHost("smtp.gmail.com");
+        mailSender.setPort(587);
+
+        mailSender.setUsername("alexeysh1922@gmail.com");
+        mailSender.setPassword("bVK-94E-Scr-TR4");
+
+        Properties properties = mailSender.getJavaMailProperties();
+        properties.put("mail.transport.protocol", "smtp");
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
+        properties.put("mail.debug", "true");
+
+        return mailSender;
+    }
 
 }

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.itis.javalab</groupId>
-    <artifactId>MusicApp</artifactId>
+    <artifactId>ProfileEmailApp</artifactId>
     <version>0.1</version>
     <build>
         <plugins>
@@ -20,6 +20,10 @@
         </plugins>
     </build>
     <packaging>war</packaging>
+
+    <properties>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
@@ -115,7 +119,11 @@
             <artifactId>spring-context-support</artifactId>
             <version>5.2.9.RELEASE</version>
         </dependency>
-
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
     </dependencies>
 
 
