@@ -20,7 +20,6 @@ import java.util.UUID;
 import static ru.itis.javalab.dto.UserDto.from;
 
 @Service
-@Profile("master")
 public class UsersServiceImpl implements UsersService {
 
     @Autowired

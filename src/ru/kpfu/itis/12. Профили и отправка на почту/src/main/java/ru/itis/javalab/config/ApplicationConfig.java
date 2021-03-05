@@ -123,7 +123,7 @@ public class ApplicationConfig {
         mailSender.setPassword(password);
 
         Properties properties = mailSender.getJavaMailProperties();
-        properties.put("spring.mail.properties.mail.transport.protocol", protocol);
+        properties.put("spring.mail.properties.mail.transport.protocol", "smtp");
         properties.put("mail.smtp.auth", auth);
         properties.put("mail.smtp.starttls.enable", enable);
         properties.put("mail.debug", debug);
