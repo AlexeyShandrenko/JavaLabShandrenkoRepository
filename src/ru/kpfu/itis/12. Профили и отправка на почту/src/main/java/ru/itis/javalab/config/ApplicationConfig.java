@@ -4,6 +4,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import freemarker.template.TemplateExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassRelativeResourceLoader;
@@ -26,6 +27,30 @@ import java.util.concurrent.Executors;
 @ComponentScan("ru.itis.javalab")
 @PropertySource("classpath:application.properties")
 public class ApplicationConfig {
+
+    @Value("${spring.mail.host}")
+    private String host;
+
+    @Value("${spring.mail.port}")
+    private Integer port;
+
+    @Value("${spring.mail.username}")
+    private String username;
+
+    @Value("${spring.mail.password}")
+    private String password;
+
+    @Value("$spring.mail.properties.mail.transport.protocol")
+    private String protocol;
+
+    @Value("${spring.mail.properties.mail.smtp.auth}")
+    private String auth;
+
+    @Value("${spring.mail.properties.mail.smtp.starttls.enable}")
+    private String enable;
+
+    @Value("${spring.mail.properties.mail.debug}")
+    private String debug;
 
     @Autowired
     private Environment environment;
@@ -91,17 +116,17 @@ public class ApplicationConfig {
     @Bean
     public JavaMailSender getJavaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        mailSender.setHost("smtp.gmail.com");
-        mailSender.setPort(587);
+        mailSender.setHost(host);
+        mailSender.setPort(port);
 
-        mailSender.setUsername("alexeysh1922@gmail.com");
-        mailSender.setPassword("bVK-94E-Scr-TR4");
+        mailSender.setUsername(username);
+        mailSender.setPassword(password);
 
         Properties properties = mailSender.getJavaMailProperties();
-        properties.put("mail.transport.protocol", "smtp");
-        properties.put("mail.smtp.auth", "true");
-        properties.put("mail.smtp.starttls.enable", "true");
-        properties.put("mail.debug", "true");
+        properties.put("spring.mail.properties.mail.transport.protocol", protocol);
+        properties.put("mail.smtp.auth", auth);
+        properties.put("mail.smtp.starttls.enable", enable);
+        properties.put("mail.debug", debug);
 
         return mailSender;
     }
