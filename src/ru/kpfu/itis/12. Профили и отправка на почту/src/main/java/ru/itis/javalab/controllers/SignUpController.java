@@ -40,6 +40,7 @@ public class SignUpController {
 
     @RequestMapping(value = "/sign_up", method = RequestMethod.POST)
     public String signUp(@Valid UserForm userForm, BindingResult bindingResult, Model model) {
+
         if (bindingResult.hasErrors()) {
             bindingResult.getAllErrors().stream().anyMatch(error -> {
                 if (Objects.requireNonNull(error.getCodes())[0].equals("userForm.ValidNames")) {
@@ -48,12 +49,12 @@ public class SignUpController {
                 return true;
             });
             model.addAttribute("userForm", userForm);
-            return "sign_up_page";
+            return "login_window";
         }
         signUpService.signUp(userForm);
-        return "redirect:/success";
+        return "redirect:/notification";
 
-    
+
     }
 
 }
