@@ -3,11 +3,13 @@ package ru.itis.javalab.repositories;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 import ru.itis.javalab.models.User;
 import ru.itis.javalab.models.UserPlaylist;
 
 import java.util.*;
 
+@Repository
 public class TracksRepositoryJdbcTemplateImpl implements TracksRepository {
 
     //language=SQL

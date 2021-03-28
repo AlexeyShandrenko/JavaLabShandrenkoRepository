@@ -16,4 +16,9 @@ public class User {
     private String email;
     private String password;
     private String age;
+    private State state;
+    private String confirm_code;
+    public enum State {
+        CONFIRMED, NOT_CONFIRMED
+    }
 }

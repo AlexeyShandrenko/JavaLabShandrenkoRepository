@@ -1,5 +1,6 @@
 package ru.itis.javalab.services;
 
+import org.springframework.stereotype.Service;
 import ru.itis.javalab.models.UserPlaylist;
 import ru.itis.javalab.repositories.TracksRepository;
 
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+@Service
 public class TrackServiceImpl implements TrackService {
 
     private TracksRepository tracksRepository;

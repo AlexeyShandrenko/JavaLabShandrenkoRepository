@@ -3,10 +3,12 @@ package ru.itis.javalab.repositories;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 import ru.itis.javalab.models.User;
 
 import java.util.*;
 
+@Repository
 public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
 
     //language=SQL
@@ -19,8 +21,8 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
     private static final String SQL_FIND_BY_EMAIL_AND_PASSWORD = "select * from users where email = :email and password = :password limit 1";
 
     //language=SQL
-    private static final String SQL_INSERT = "insert into users (firstname, lastname, email, password, age) " +
-            "values (:firstname, :lastname, :email, :password, :age)";
+    private static final String SQL_INSERT = "insert into users (firstname, lastname, email, password, age, confirm_code) " +
+            "values (:firstname, :lastname, :email, :password, :age, :confirm_code)";
 
     //language=SQL
     private static final String SQL_UPDATE_USER = "update users set firstname = :firstname, lastname = :lastname, age = :age where id = :id";
@@ -100,6 +102,7 @@ public class UsersRepositoryJdbcTemplateImpl implements UsersRepository {
         params.put("email", entity.getEmail());
         params.put("password", entity.getPassword());
         params.put("age", entity.getAge());
+        params.put("confirm_code", entity.getConfirm_code());
         jdbcTemplate.update(SQL_INSERT, params);
     }
 
