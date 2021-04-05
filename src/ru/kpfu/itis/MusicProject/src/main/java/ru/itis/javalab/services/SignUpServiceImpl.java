@@ -2,6 +2,7 @@ package ru.itis.javalab.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -50,12 +51,13 @@ public class SignUpServiceImpl implements SignUpService {
                 .age(form.getAge())
                 .build();
 
-        try {
         usersRepository.save(newUser);
         String confirmMail = mailsGenerator.getMailForConfirm(serverUrl, newUser.getConfirm_code());
-        emailService.sendSimpleMessage(newUser.getEmail(), "Регистрация", from, confirmMail);
+        try {
+            emailService.sendSimpleMessage(newUser.getEmail(), "Регистрация", from, confirmMail);
         } catch (MessagingException e) {
             throw new IllegalArgumentException(e);
         }
+
     }
 }

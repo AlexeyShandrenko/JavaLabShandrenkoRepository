@@ -13,6 +13,7 @@ ru\itis\javalab\validation\NamesValidator.class
 ru\itis\javalab\services\BCrypterService.class
 ru\itis\javalab\services\SignUpService.class
 ru\itis\javalab\services\SignUpServiceImpl.class
+ru\itis\javalab\validation\SignInValidator.class
 ru\itis\javalab\config\ApplicationConfig.class
 ru\itis\javalab\controllers\SignUpController.class
 ru\itis\javalab\controllers\MainPageController.class
@@ -32,3 +33,4 @@ ru\itis\javalab\models\User$UserBuilder.class
 ru\itis\javalab\util\EmailServiceDebugImpl.class
 ru\itis\javalab\dto\UserDto$UserDtoBuilder.class
 ru\itis\javalab\util\FreemarkerMailsGeneratorImpl.class
+ru\itis\javalab\validation\ValidSignIn.class

@@ -23,7 +23,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: #fdf4e3;
+            background: #f6f3ea;
             text-align: center;
             border-radius: 25px;
         }

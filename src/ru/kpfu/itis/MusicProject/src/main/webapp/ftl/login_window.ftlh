@@ -1,11 +1,12 @@
 <#ftl encoding="UTF-8"/>
 <!doctype html>
 <html lang="en">
+<#import "spring.ftl" as spring/>
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../front/icons/favicon.svg" type="image/x-icon">
     <title>Регистрация</title>
-<#--    <link rel="stylesheet" type="text/css" href="../front/registration/style_for_login_window.css"/>-->
+    <#--    <link rel="stylesheet" type="text/css" href="../front/registration/style_for_login_window.css"/>-->
     <style>
         body {
             margin: 0;
@@ -121,24 +122,46 @@
         .anonymous a:hover {
             color: #357898;
         }
+
+        .error {
+            color: red;
+        }
+
     </style>
 </head>
 <body>
+<h2><a href="?lang=en">EN</a></h2>
+<h2><a href="?lang=ru">РУ</a></h2>
+<@spring.bind "userForm"/>
 <form class="registrationBox" name="myForm" action="/sign_up" method="post">
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-vinyl-fill" viewBox="0 0 16 16">
         <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 3a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0z"/>
     </svg>
-    <h1>Registration</h1>
-    <input type="text" name="firstname" placeholder="Firstname">
-    <input type="text" name="lastname" placeholder="Lastname">
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Password">
+    <h1><@spring.message 'sign_up_page.registration.title'/></h1>
+    <#--    <input type="text" name="firstname" placeholder="Firstname">-->
+    <@spring.formInput "userForm.firstname" "placeholder='Firstname'"/>
+    <@spring.showErrors "<br>" "error"/>
+    <#--    <input type="text" name="lastname" placeholder="Lastname">-->
+    <@spring.formInput "userForm.lastname" "placeholder='Lastname'"/>
+    <@spring.showErrors "<br>" "error"/>
+
+    <#if namesErrorMessage??>
+        <p style="color: red">${namesErrorMessage}</p>
+    </#if>
+
+    <@spring.formInput "userForm.email" "placeholder='Email'"/>
+    <@spring.showErrors "<br>" "error"/>
+    <#--    <input type="email" name="email" placeholder="Email">-->
+    <@spring.formPasswordInput "userForm.password" "placeholder='Password'"/>
+    <@spring.showErrors "<br>" "error"/>
+    <#--    <input type="password" name="password" placeholder="Password">-->
     <input type="password" name="password_repeat" placeholder="Password repeat">
     <input type="number" name="age" placeholder="Age">
     <a href="" style="text-decoration: none"><input type="submit" name="" value="Sign Up"></a>
-    <div class="anonymous"> Enter like <a href=""><b>Anonymous</b></a> </div>
+    <div class="anonymous"> <@spring.message 'sign_up_page.anonymous'/> <a href=""><b><@spring.message 'sign_up_page.anonymous1'/></b></a> </div>
 </form>
+
 
 <#--<script src="../front/registration/script_for_login_window.js"></script>-->
 <script>

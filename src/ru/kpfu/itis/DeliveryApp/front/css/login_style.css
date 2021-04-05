@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+
+body {
+  background: url(../img/plastic-shopping-basket-with-fresh-products-vector-28436242.jpg) 50% 5% no-repeat;
+  background-color: #e1abb7;
+}
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+}
+
+.registration {}
+
+.registration__box {
+  width: 400px;
+  padding: 40px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f6f3ea;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.registration__img {
+  width: 90px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.registration__title {
+  font-size: 24px;
+  line-height: 1.44;
+  letter-spacing: 0.36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #363237;
+  text-shadow: 1px 1px 2px #363237;
+}
+
+.registration__box input[type = "email"],
+.registration__box input[type = "password"] {
+  background: #f6f3ea;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #9364b2;
+  padding: 14px 10px;
+  width: 250px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  color: #363237;
+}
+
+.registration__box input[type = "email"]:focus,
+.registration__box input[type = "password"]:focus {
+  width: 280px;
+  background-color: #b18bcb;
+  color: #f6f3ea;
+}
+
+.registration__box input[type = "submit"] {
+  border: 0;
+  background-color: #754694;
+  display: block;
+  text-align: center;
+  box-shadow: 1px 1px 4px #9364b2;
+  padding: 10px 30px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.registration__box input[type = "submit"]:hover {
+  background-color: #9364b2;
+}
+
+.sign-up {
+  margin-top: 20px;
+}
+
+.sign-up__link {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sign-up__link:active {
+  color: #363237;
+}
