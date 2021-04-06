@@ -39,6 +39,7 @@ ru\itis\javalab\dto\UserDto.class
 ru\itis\javalab\models\ImageBackground.class
 ru\itis\javalab\validation\PasswordValidator.class
 ru\itis\javalab\controllers\FAQController.class
+ru\itis\javalab\controllers\MainPageAnonymousController.class
 ru\itis\javalab\services\UsersServiceImpl.class
 ru\itis\javalab\models\User.class
 ru\itis\javalab\config\LocalizationConfig.class

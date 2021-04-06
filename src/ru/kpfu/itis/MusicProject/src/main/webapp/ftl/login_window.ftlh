@@ -159,7 +159,7 @@
     <input type="password" name="password_repeat" placeholder="Password repeat">
     <input type="number" name="age" placeholder="Age">
     <a href="" style="text-decoration: none"><input type="submit" name="" value="Sign Up"></a>
-    <div class="anonymous"> <@spring.message 'sign_up_page.anonymous'/> <a href=""><b><@spring.message 'sign_up_page.anonymous1'/></b></a> </div>
+    <div class="anonymous"> <@spring.message 'sign_up_page.anonymous'/> <a href="#"><b><@spring.message 'sign_up_page.anonymous1'/></b></a> </div>
 </form>
 
 

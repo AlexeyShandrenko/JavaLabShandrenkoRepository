@@ -133,7 +133,7 @@
     <input type="email" name="email" placeholder="Email">
     <input type="password" name="password" placeholder="Password">
     <a href="" style="text-decoration: none"><input type="submit" name="" value="Sign In"></a>
-    <div class="anonymous"> Enter like <a href=""><b>Anonymous</b></a></div>
+    <div class="anonymous"> Enter like <a href="#"><b>Anonymous</b></a></div>
     <div class="anonymous">Don't have an account? <a href="/sign_up"><b>Sign Up</b></a></div>
 </form>
 

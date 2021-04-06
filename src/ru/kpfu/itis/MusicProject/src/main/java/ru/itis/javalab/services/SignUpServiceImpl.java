@@ -52,12 +52,12 @@ public class SignUpServiceImpl implements SignUpService {
                 .build();
 
         usersRepository.save(newUser);
-        String confirmMail = mailsGenerator.getMailForConfirm(serverUrl, newUser.getConfirm_code());
-        try {
-            emailService.sendSimpleMessage(newUser.getEmail(), "Регистрация", from, confirmMail);
-        } catch (MessagingException e) {
-            throw new IllegalArgumentException(e);
-        }
+//        String confirmMail = mailsGenerator.getMailForConfirm(serverUrl, newUser.getConfirm_code());
+//        try {
+//            emailService.sendSimpleMessage(newUser.getEmail(), "Регистрация", from, confirmMail);
+//        } catch (MessagingException e) {
+//            throw new IllegalArgumentException(e);
+//        }
 
     }
 }
