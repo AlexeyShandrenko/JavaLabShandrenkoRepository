@@ -1,0 +1,7 @@
+ru\itis\javalab\models\User.class
+ru\itis\javalab\config\ApplicationInitializer.class
+ru\itis\javalab\models\User$UserBuilder.class
+ru\itis\javalab\config\ApplicationConfig.class
+ru\itis\javalab\repositories\UsersRepository.class
+ru\itis\javalab\repositories\CrudRepository.class
+ru\itis\javalab\repositories\UsersRepositoryJdbcTemplateImpl.class
