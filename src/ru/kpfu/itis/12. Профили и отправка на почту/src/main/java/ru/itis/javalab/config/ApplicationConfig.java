@@ -97,38 +97,38 @@ public class ApplicationConfig {
         return configurer;
     }
 
-//    @Bean
-//    public freemarker.template.Configuration configuration() {
-//         freemarker.template.Configuration configuration = new freemarker.template.Configuration(freemarker.template.Configuration.VERSION_2_3_30);
-//         configuration.setDefaultEncoding("UTF-8");
-//         configuration.setTemplateLoader(
-//                 new SpringTemplateLoader(new ClassRelativeResourceLoader(this.getClass()),
-//                         "/"));
-//        configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
-//        return configuration;
-//    }
-//
-//    @Bean
-//    public ExecutorService executorService() {
-//        return Executors.newCachedThreadPool();
-//    }
-//
-//    @Bean
-//    public JavaMailSender getJavaMailSender() {
-//        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-//        mailSender.setHost(host);
-//        mailSender.setPort(port);
-//
-//        mailSender.setUsername(username);
-//        mailSender.setPassword(password);
-//
-//        Properties properties = mailSender.getJavaMailProperties();
-//        properties.put("spring.mail.properties.mail.transport.protocol", "smtp");
-//        properties.put("mail.smtp.auth", auth);
-//        properties.put("mail.smtp.starttls.enable", enable);
-//        properties.put("mail.debug", debug);
-//
-//        return mailSender;
-//    }
+    @Bean
+    public freemarker.template.Configuration configuration() {
+         freemarker.template.Configuration configuration = new freemarker.template.Configuration(freemarker.template.Configuration.VERSION_2_3_30);
+         configuration.setDefaultEncoding("UTF-8");
+         configuration.setTemplateLoader(
+                 new SpringTemplateLoader(new ClassRelativeResourceLoader(this.getClass()),
+                         "/"));
+        configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
+        return configuration;
+    }
+
+    @Bean
+    public ExecutorService executorService() {
+        return Executors.newCachedThreadPool();
+    }
+
+    @Bean
+    public JavaMailSender getJavaMailSender() {
+        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+        mailSender.setHost(host);
+        mailSender.setPort(port);
+
+        mailSender.setUsername(username);
+        mailSender.setPassword(password);
+
+        Properties properties = mailSender.getJavaMailProperties();
+        properties.put("spring.mail.properties.mail.transport.protocol", "smtp");
+        properties.put("mail.smtp.auth", auth);
+        properties.put("mail.smtp.starttls.enable", enable);
+        properties.put("mail.debug", debug);
+
+        return mailSender;
+    }
 
 }

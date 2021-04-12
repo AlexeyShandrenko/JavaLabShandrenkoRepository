@@ -14,9 +14,6 @@
 
 </head>
 <body>
-<#--<div class="content1">-->
-<#--    <div class="content"><@content></@content></div>-->
-<#--</div>-->
 <@content></@content>
 </body>
 </html>

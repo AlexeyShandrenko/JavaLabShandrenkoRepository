@@ -155,3 +155,33 @@ body {
   background-color: #9364b2;
 }
 
+.localization-button {
+  display: flex;
+  justify-content: space-around;
+  width: 120px;
+  flex: 1 1 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 5px;
+}
+
+.localization-button p {
+  background-color: #fff3f0;
+  width: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.localization-button p a {
+  color: #323332;
+  font-size: 16px;
+}
+
+.localization-button p a:hover {
+  color: #9364b2;
+}
+
+
+

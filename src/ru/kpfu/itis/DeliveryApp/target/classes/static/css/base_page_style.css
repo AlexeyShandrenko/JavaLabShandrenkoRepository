@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+
+body {
+  background: url(/static/images/background.jpg) 0 0/100% 850px no-repeat;
+}
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.menu {
+  padding: 47px;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+  margin: 0 auto;
+
+}
+
+.menu__element a {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 0.90;
+  color: #1a1a1a;
+  text-shadow: 1px 1px 1px #1a1a1a;
+}
+
+
+
+.title {
+ margin: 100px 0px 50px 70px;
+ width: 500px;
+ min-height: 400px;
+ text-align: center;
+}
+
+.title__main {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 0.75;
+  letter-spacing: 4px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.title__text {
+  font-size: 18px;
+  line-height: 1.44;
+  letter-spacing: 0.36px;
+  margin-bottom: 20px;
+}
+
+.title__text-info {
+  font-size: 18px;
+  line-height: 1.44;
+  letter-spacing: 0.36px;
+}
+
+.button {
+  margin: 50px 0 0 0; 
+}
+
+.button__element {
+  background-color: #9364b2; 
+  width: 120px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.button__element:hover {
+  box-shadow: 2px 2px 4px #a37dbc;
+  background-color: #ab79cd;
+}
+
+.button__content {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.54;
+  letter-spacing: 0.35px;
+  color: #ffffff;
+}
+
+.localization-button {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  flex: 1 1 auto;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 30px 5px;
+}
+
+.localization-button p {
+  background-color: #fff3f0;
+  width: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.localization-button p a {
+  color: #323332;
+  font-size: 16px;
+}
+
+.localization-button p a:hover {
+  color: #9364b2;
+}
+
+
+

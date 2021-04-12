@@ -23,6 +23,7 @@
 
     <properties>
         <failOnMissingWebXml>false</failOnMissingWebXml>
+        <spring.version>5.2.13.RELEASE</spring.version>
     </properties>
 
     <dependencies>
@@ -99,7 +100,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.2.9.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
         <dependency>
@@ -111,13 +112,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.2.9.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>5.2.9.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.mail</groupId>
@@ -136,6 +137,19 @@
             <artifactId>hibernate-validator</artifactId>
             <version>6.2.0.Final</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.28.Final</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.3.7.RELEASE</version>
+        </dependency>
+
 
     </dependencies>
 

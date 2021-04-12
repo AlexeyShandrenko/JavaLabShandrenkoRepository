@@ -19,6 +19,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
         AnnotationConfigWebApplicationContext springWebContext = new AnnotationConfigWebApplicationContext();
 
         PropertySource propertySource = new ResourcePropertySource("classpath:application.properties");
+        springWebContext.getEnvironment().setActiveProfiles((String) propertySource.getProperty("spring.profile"));
 
         springWebContext.register(ApplicationConfig.class);
         servletContext.addListener(new ContextLoaderListener(springWebContext));

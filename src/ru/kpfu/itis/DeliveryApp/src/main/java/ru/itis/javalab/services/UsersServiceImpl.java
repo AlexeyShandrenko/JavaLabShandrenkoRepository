@@ -1,13 +1,10 @@
 package ru.itis.javalab.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.itis.javalab.models.User;
-import ru.itis.javalab.repositories.UsersRepository;
+import ru.itis.javalab.repositories.old.UsersRepository;
 
-import javax.mail.MessagingException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
