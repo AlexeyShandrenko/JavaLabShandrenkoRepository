@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 
 body {
-  background: url(static/images/shutterstock_156321920.0.0.jpg) center;
+  background: url(/static/images/shutterstock_156321920.0.0.jpg) center;
 }
 
 .wrapper {

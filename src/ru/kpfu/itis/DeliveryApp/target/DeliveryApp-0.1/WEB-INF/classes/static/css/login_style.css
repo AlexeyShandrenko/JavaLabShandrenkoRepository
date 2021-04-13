@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 
 body {
-  background: url(static/images/plastic-shopping-basket-with-fresh-products-vector-28436242.jpg) 50% 5% no-repeat;
+  background: url(/static/images/plastic-shopping-basket-with-fresh-products-vector-28436242.jpg) 50% 5% no-repeat;
   background-color: #e1abb7;
 }
 

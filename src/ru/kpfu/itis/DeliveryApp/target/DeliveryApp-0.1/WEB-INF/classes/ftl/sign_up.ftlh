@@ -14,7 +14,7 @@
 <div class="wrapper">
     <div class="registration">
         <form class="registration__box" action="/sign_up" method="post">
-            <a href="/base_page"><img src="../img/logo.png" alt="" class="registration__img"></a>
+            <a href="/base_page"><img src="../static/images/logo.png" alt="" class="registration__img"></a>
             <h1 class="registration__title"><@spring.message 'sign_up_registration__title'/></h1>
 
             <@spring.formInput "userForm.firstname" "placeholder='Firstname'"/>
