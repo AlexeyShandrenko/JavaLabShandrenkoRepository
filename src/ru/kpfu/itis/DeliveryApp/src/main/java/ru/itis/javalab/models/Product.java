@@ -28,9 +28,9 @@ public class Product {
     private Subcategory subcategory;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "photo_id", referencedColumnName = "id")
-    private Product_photo product_photo;
+    private ProductPhoto product_photo;
     @OneToOne(mappedBy = "product")
-    private Product_info product_info;
+    private ProductInfo product_info;
     @ManyToMany(mappedBy = "productList")
     private List<Orders> ordersList;
 

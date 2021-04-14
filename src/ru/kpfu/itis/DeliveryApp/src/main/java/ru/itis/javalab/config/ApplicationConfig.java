@@ -19,6 +19,9 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.session.config.annotation.web.http.EnableSpringHttpSession;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.ui.freemarker.SpringTemplateLoader;
@@ -27,8 +30,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
-import ru.itis.javalab.services.BCrypterService;
-import ru.itis.javalab.services.BCrypterServiceImpl;
+import ru.itis.javalab.services.old.BCrypterService;
+import ru.itis.javalab.services.old.BCrypterServiceImpl;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -40,7 +43,8 @@ import java.util.concurrent.Executors;
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "ru.itis.javalab.repositories")
 @Configuration
-@ComponentScan("ru.itis.javalab")
+@EnableSpringHttpSession
+@ComponentScan(basePackages = "ru.itis.javalab")
 @PropertySource("classpath:application.properties")
 public class ApplicationConfig implements WebMvcConfigurer {
 
@@ -183,6 +187,11 @@ public class ApplicationConfig implements WebMvcConfigurer {
         entityManagerFactory.setJpaVendorAdapter(hibernateJpaVendorAdapter);
         entityManagerFactory.setJpaProperties(additionalProperties());
         return entityManagerFactory;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
 

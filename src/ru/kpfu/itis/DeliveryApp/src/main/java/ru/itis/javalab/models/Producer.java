@@ -19,5 +19,5 @@ public class Producer {
     private Long id;
     private String name;
     @OneToMany(mappedBy = "producer")
-    private List<Product_info> product_infoList;
+    private List<ProductInfo> product_infoList;
 }
