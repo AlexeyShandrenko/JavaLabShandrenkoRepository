@@ -9,10 +9,8 @@ D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\s
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\dto\UserForm.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\validation\ValidNames.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\models\Subcategory.java
-D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\old\BCrypterServiceImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\repositories\old\CrudRepository.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\security\details\UserDetailsServiceImpl.java
-D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\old\LoginService.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\controllers\SignUpController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\config\ApplicationInitializer.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\utils\FreemarkerMailsGeneratorImpl.java
@@ -25,11 +23,9 @@ D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\s
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\controllers\ProfileController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\controllers\LoginController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\models\Producer.java
-D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\old\LoginServiceImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\SignUpServiceImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\validation\ValidMatchPassword.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\repositories\UsersRepository.java
-D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\old\BCrypterService.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\controllers\BasePageContoller.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\utils\MailsGenerator.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\config\SessionInitializer.java

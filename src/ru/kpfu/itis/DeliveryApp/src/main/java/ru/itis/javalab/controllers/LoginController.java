@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ru.itis.javalab.dto.UserForm;
 import ru.itis.javalab.models.User;
-import ru.itis.javalab.services.old.BCrypterService;
-import ru.itis.javalab.services.old.LoginService;
 import ru.itis.javalab.services.UsersService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,12 +19,6 @@ public class LoginController {
 
     @Autowired
     private UsersService usersService;
-
-    @Autowired
-    private BCrypterService bCrypterService;
-
-    @Autowired
-    private LoginService loginService;
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String getLoginPage(Model model) {

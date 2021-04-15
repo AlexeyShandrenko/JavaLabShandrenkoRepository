@@ -1,6 +1,9 @@
 package ru.itis.javalab.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import ru.itis.javalab.validation.ValidAge;
 import ru.itis.javalab.validation.ValidMatchPassword;
 import ru.itis.javalab.validation.ValidNames;
@@ -9,6 +12,9 @@ import ru.itis.javalab.validation.ValidPassword;
 import javax.validation.constraints.Email;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @ValidNames(message = "{errors.invalid.names}", name = "firstname", surname = "lastname")
 @ValidMatchPassword(message = "{errors.incorrect.unmatched_password}", password = "password", password_repeat = "password_repeat")
 public class UserForm {

@@ -7,17 +7,18 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import ru.itis.javalab.models.User;
+import ru.itis.javalab.repositories.UsersRepository;
 import ru.itis.javalab.services.UsersService;
 
-@Component(value = "usersDetailService")
+@Component(value = "userDetailsService")
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UsersService usersService;
+    private UsersRepository usersRepository;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = usersService.findUserByEmail(email)
+        User user = usersRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         return new UserDetailsImpl(user);
     }

@@ -14,6 +14,7 @@
 <div class="wrapper">
     <div class="registration">
         <form class="registration__box" action="/login" method="post">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
             <a href="/base_page"><img src="../static/images/logo.png" alt="" class="registration__img"></a>
             <h1 class="registration__title"><@spring.message 'login_title'/></h1>
             <input type="email" name="email" placeholder="<@spring.message 'login_email'/>">

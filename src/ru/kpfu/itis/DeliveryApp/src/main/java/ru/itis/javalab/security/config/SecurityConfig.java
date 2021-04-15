@@ -21,13 +21,14 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import javax.sql.DataSource;
 
 @EnableWebSecurity
+@ComponentScan(value = "ru.itis.javalab")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    @Qualifier(value = "usersDetailService")
+    @Qualifier(value = "userDetailsService")
     private UserDetailsService userDetailsService;
 
     @Autowired
@@ -39,6 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/base_page").permitAll()
                 .antMatchers("/sign_up").permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/profile").authenticated()
                 .antMatchers("/main_page").hasAuthority("ADMIN")
                 .and()
                 .formLogin()
@@ -49,10 +51,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
-                .deleteCookies("JSESSIONID")
-                .and()
-                .rememberMe()
-                .rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository());
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID");
     }
 
     @Override
