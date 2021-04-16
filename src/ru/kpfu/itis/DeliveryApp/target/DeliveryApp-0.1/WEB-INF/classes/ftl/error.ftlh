@@ -9,5 +9,6 @@
 </head>
 <body>
 <p>Error!</p>
+<a href="/login">Try again</a>
 </body>
 </html>

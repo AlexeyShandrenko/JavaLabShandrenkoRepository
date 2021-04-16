@@ -26,6 +26,10 @@ public class LoginController {
         return "login";
     }
 
+    @RequestMapping(value = "/login&error", method = RequestMethod.GET)
+    public String getErrorPage() {
+        return "error";
+    }
 //    @RequestMapping(value = "login", method = RequestMethod.POST)
 //    public ModelAndView login(UserForm userForm, HttpServletRequest request, HttpServletResponse response) {
 //        String email = userForm.getEmail();

@@ -1,5 +1,4 @@
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\SignUpWithoutEmailServiceImpl.java
-D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\security\config\SecurityWebApplicationInitializer.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\validation\AgeValidator.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\models\Orders.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\validation\NamesValidator.java
@@ -30,6 +29,7 @@ D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\s
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\utils\MailsGenerator.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\config\SessionInitializer.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\models\ProductInfo.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\security\details\SecurityWebApplicationInitializer.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\utils\EmailServiceImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\validation\ValidAge.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\SignUpService.java
