@@ -17,19 +17,17 @@ import java.util.Optional;
 @Controller
 public class LoginController {
 
-    @Autowired
-    private UsersService usersService;
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String getLoginPage(Model model) {
-        model.addAttribute("userForm", new UserForm());
+    @RequestMapping(value = "/sign_in", method = RequestMethod.GET)
+    public String getLoginPage() {
         return "login";
     }
 
-    @RequestMapping(value = "/login&error", method = RequestMethod.GET)
+    @RequestMapping(value = "/sign_in&error", method = RequestMethod.GET)
     public String getErrorPage() {
         return "error";
     }
+
+
 //    @RequestMapping(value = "login", method = RequestMethod.POST)
 //    public ModelAndView login(UserForm userForm, HttpServletRequest request, HttpServletResponse response) {
 //        String email = userForm.getEmail();

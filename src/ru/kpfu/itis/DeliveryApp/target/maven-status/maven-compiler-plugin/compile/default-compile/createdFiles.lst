@@ -13,7 +13,6 @@ ru\itis\javalab\models\Category.class
 ru\itis\javalab\config\ApplicationConfig.class
 ru\itis\javalab\controllers\MainPageController.class
 ru\itis\javalab\models\Subcategory.class
-ru\itis\javalab\controllers\BasePageContoller.class
 ru\itis\javalab\models\Orders$OrdersBuilder.class
 ru\itis\javalab\models\ProductInfo.class
 ru\itis\javalab\validation\ValidPassword.class
@@ -40,6 +39,8 @@ ru\itis\javalab\validation\PasswordMatchValidator.class
 ru\itis\javalab\utils\EmailServiceImpl.class
 ru\itis\javalab\utils\MailsGenerator.class
 ru\itis\javalab\security\config\SecurityConfig.class
+ru\itis\javalab\controllers\BasePageController.class
+ru\itis\javalab\controllers\EntryContoller.class
 ru\itis\javalab\services\SignUpService.class
 ru\itis\javalab\services\SignUpServiceImpl.class
 ru\itis\javalab\controllers\LoginController.class

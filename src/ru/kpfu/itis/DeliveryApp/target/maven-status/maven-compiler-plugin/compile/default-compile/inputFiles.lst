@@ -25,7 +25,6 @@ D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\s
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\SignUpServiceImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\validation\ValidMatchPassword.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\repositories\UsersRepository.java
-D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\controllers\BasePageContoller.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\utils\MailsGenerator.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\config\SessionInitializer.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\models\ProductInfo.java
@@ -33,12 +32,14 @@ D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\s
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\utils\EmailServiceImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\validation\ValidAge.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\services\SignUpService.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\controllers\EntryContoller.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\repositories\OrdersRepository.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\validation\PasswordValidator.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\models\Category.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\utils\EmailService.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\repositories\old\UsersRepository.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\models\ProductPhoto.java
+D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\controllers\BasePageController.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\security\details\UserDetailsImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\repositories\old\UsersRepositoryJdbcTemplateImpl.java
 D:\Repository\JavaLab\JavaLabShandrenkoRepository\src\ru\kpfu\itis\DeliveryApp\src\main\java\ru\itis\javalab\security\config\SecurityConfig.java

@@ -42,6 +42,9 @@ public class SignUpWithoutEmailServiceImpl implements SignUpService {
                 .email(userForm.getEmail())
                 .password(passwordEncoder.encode(userForm.getPassword()))
                 .confirm_code(UUID.randomUUID().toString())
+                .status(User.Status.UNCONFIRMED)
+                .role(User.Role.USER)
+                .state(User.State.ACTIVE)
                 .build();
 
         usersRepository.save(newUser);

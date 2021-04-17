@@ -3,7 +3,6 @@ package ru.itis.javalab.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.itis.javalab.dto.UserForm;
@@ -35,9 +34,9 @@ public class SignUpServiceImpl implements SignUpService {
     @Value("${spring.mail.username}")
     private String from;
 
-    public SignUpServiceImpl(UsersRepository usersRepository) {
+    public SignUpServiceImpl(UsersRepository usersRepository, PasswordEncoder passwordEncoder) {
         this.usersRepository = usersRepository;
-        this.passwordEncoder = new BCryptPasswordEncoder();
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override

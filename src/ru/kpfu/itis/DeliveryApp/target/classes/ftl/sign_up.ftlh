@@ -43,7 +43,7 @@
 
             <@spring.formInput "userForm.age" "placeholder='Age'"/>
             <@spring.showErrors "<br>" "error"/>
-            <a href="/login" class=""><input type="submit" value="<@spring.message 'sign_up_submit'/>"></a>
+            <a href="/sign_in" class=""><input type="submit" value="<@spring.message 'sign_up_submit'/>"></a>
         </form>
     </div>
 

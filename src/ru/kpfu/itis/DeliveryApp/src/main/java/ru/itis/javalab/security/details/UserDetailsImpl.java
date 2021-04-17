@@ -59,4 +59,5 @@ public class UserDetailsImpl implements UserDetails {
     public String getLastName() {
         return user.getLastname();
     }
+
 }

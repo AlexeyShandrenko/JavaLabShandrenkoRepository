@@ -5,20 +5,29 @@
 <head>
     <title>Profile Page</title>
 
+    <style>
+        a {
+            position: relative;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+
 </head>
 
 <body>
 <table>
     <h1>Your profile:</h1>
     <tr>
-        <td>${user.getFirstName()}</td>
+        <td>${users.getFirstName()}</td>
     </tr>
     <tr>
-        <td>${user.getLastName()}</td>
+        <td>${users.getLastName()}</td>
     </tr>
-    <tr>
-        <td>${user.getEmail()}</td>
-    </tr>
+<#--    <tr>-->
+<#--        <td>${users.getEmail()}</td>-->
+<#--    </tr>-->
+    <a href="/logout">Exit</a>
 </table>
 </body>
 </html>

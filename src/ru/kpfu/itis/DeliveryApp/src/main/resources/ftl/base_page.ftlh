@@ -29,7 +29,7 @@
 
             <div class="button">
                 <div class="button__element">
-                    <a href="/login" class="button__content"><@spring.message 'base_page_enter'/></a>
+                    <a href="/sign_in" class="button__content"><@spring.message 'base_page_enter'/></a>
                 </div>
             </div>
         </div>

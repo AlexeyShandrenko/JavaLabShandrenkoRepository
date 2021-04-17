@@ -27,13 +27,6 @@ public class SignUpController {
 
     @RequestMapping(value = "/sign_up", method = RequestMethod.POST)
     public String saveUser(@Valid UserForm userForm, BindingResult bindingResult, Model model) {
-//        if (!bindingResult.hasErrors()) {
-//            signUpService.signUp(userForm);
-//            return "redirect:/login";
-//        } else {
-//            model.addAttribute("userForm", userForm);
-//            return "sign_up";
-//        }
 
         if (bindingResult.hasErrors()) {
             bindingResult.getAllErrors().stream().anyMatch(error -> {
@@ -49,7 +42,7 @@ public class SignUpController {
             return "sign_up";
         }
         signUpService.signUp(userForm);
-        return "redirect:/login";
+        return "redirect:/sign_in";
 
     }
 
