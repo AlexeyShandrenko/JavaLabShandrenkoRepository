@@ -1050,6 +1050,7 @@ NOT_CONFIRMED</Labels>
     </table>
     <table id="50" parent="17" name="users">
       <ObjectId>66529</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
       <StateNumber>1731</StateNumber>
     </table>

@@ -1,0 +1,41 @@
+POST http://localhost:8080/sign_up
+Content-Type: application/json
+
+{
+"firstname" : "alexey",
+  "lastname" : "shandrenko",
+  "email" : "adshandrenko@gmail.com",
+  "password" : "123456789"
+}
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+"email" : "adshandrenko@gmail.com",
+  "password" : "123456789",
+  "deviceFingerprint" : "idea"
+}
+
+###
+
+GET http://localhost:8080/profile
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMyIsInJvbGUiOiJVU0VSIiwic3RhdGUiOiJBQ1RJVkUiLCJpZCI6MjMsImV4cCI6MTYyMTgyMTE0NSwiaWF0IjoxNjIxODE5MzQ1LCJlbWFpbCI6ImFkc2hhbmRyZW5rb0BnbWFpbC5jb20ifQ.btJ8MWTndEm7uyBPixH_SXn0li-Xu80sa1qOLtygbEE
+
+###
+
+GET http://localhost:8080/refresh_tokens
+Content-Type: application/json
+
+{
+  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMyIsInJvbGUiOiJVU0VSIiwic3RhdGUiOiJBQ1RJVkUiLCJpZCI6MjMsImV4cCI6MTYyMTgyMTE0NSwiaWF0IjoxNjIxODE5MzQ1LCJlbWFpbCI6ImFkc2hhbmRyZW5rb0BnbWFpbC5jb20ifQ.btJ8MWTndEm7uyBPixH_SXn0li-Xu80sa1qOLtygbEE",
+  "refreshToken": "700a31e1-248d-400a-a497-0ed1536058a3"
+}
+
+###
+
+#"accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsInJvbGUiOiJVU0VSIiwic3RhdGUiOiJBQ1RJVkUiLCJpZCI6MjEsImV4cCI6MTYyMTgyMDEzNywiaWF0IjoxNjIxODE4MzM3LCJlbWFpbCI6ImFkc2hhbmRyZW5rb0BnbWFpbC5jb20ifQ.8lsSCDW0sInzI4y8o5g5NmLtp0u17yUx2YSo9zXp1TA",
+#  "refreshToken": "83488cfe-8a6a-4a1e-9c85-9c53b455d95e"
+
